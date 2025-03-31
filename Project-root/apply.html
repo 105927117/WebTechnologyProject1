@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content=" A form that allows a potential candidate to register their interest in the advertised
+    position.">
+    <meta name="keywords" content="ClickMaXXing, Job, Job form">
+    <meta name="author" content="Kunvuth You">
+    <title>Job Position application page</title>
+</head>
+<body>
+    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+
+        <div>
+            <h3>Applicant Details</h3>
+                <label for="Name">Name:</label><!--Add asterick(*) for required-->
+                <br>
+                <input type="text" name="First-Name" id="First-Name" pattern="[a-zA-Z\s]{0,20}" title="maximum 20 alphabetical characters limit" placeholder="First Name" required>
+                <input type="text" name="Last-Name" id="Last-Name" pattern="[a-zA-Z\s]{0,20}" title="maximum 20 alphabetical characters limit" placeholder="Last Name" required>
+                <br>
+            
+                <label for="Date-of-Birth">Date of Birth:</label>
+                <input type="date" name="Date-of-Birth" id="Date-of-Birth" value="Date-of-Birth">
+                <br>
+                <fieldset>
+                    <legend for="Gender">Gender:</legend>
+                    <input type="radio" name="Gender" id="Male" value="Male" checked required>
+                    <label for="Male">Male</label>
+            
+                    <input type="radio" name="Gender" id="Female" value="Female">
+                    <label for="Female">Female</label>
+            
+                    <input type="radio" name="Gender" id="Others" value="Others">
+                    <label for="Others">Others</label>
+                </fieldset>
+        </div>
+
+        <div>
+            <h3>Contact Details</h3>
+                <label for="Street-Address">Street Address:</label>
+                <br>
+                <input type="text" name="Street-Address" id="Street-Address" pattern="[a-zA-Z0-9\s]{0,40}" title="maximum 40 alphabetical characters limit" required >
+                <br>
+                <label for="Suburb">Suburb:</label>
+                <br>
+                <input type="text" name="Suburb" id="Suburb" pattern="[a-zA-Z\s]{0,40}" title="maximum 40 alphabetical characters limit" required >
+                <br>
+                <label for="State">State:</label>
+                <select name="State" id="State" required>
+                    <option value="">Please Select</option>
+                    <option value="VIC">VIC</option>
+                    <option value="NSW">NSW</option>
+                    <option value="QLD">QLD</option>
+                    <option value="NT">NT</option>
+                    <option value="WA">WA</option>
+                    <option value="SA">SA</option>
+                    <option value="TAS">TAS</option>
+                    <option value="ACT">ACT</option>
+                </select>
+                <label for="Postcode">Postcode:</label>
+                <input type="text" name="Postcode" id="Postcode" pattern="\d{4}">
+                <br>
+                <label for="Email">Email:</label>
+                <input type="text" name="Email" id="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                <br>
+                <label for="Phone-number">Phone number:</label>
+                <input type="tel" name="Phone-number" id="Phone-number" pattern="[\d\s]{8,12}">
+        </div>
+        <div>
+            <h3>Job Application Details</h3>
+                <label for="Job-reference-number">Job reference number</label>
+                <select name="Job-reference-number" id="Job-reference-number">
+                    <option value="">Please select</option><!-----------------------------fill in later------------------------------------>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <br>
+                <label for="Required technical list ">Required technical list:</label>
+                <br>
+                <input type="checkbox" name="" id=""><!-----------------------------fill in later------------------------------------>
+                <label for=""></label>
+                <br>
+                <input type="checkbox" name="" id="">
+                <label for=""></label>
+                <br>
+                <label for="Other-skills">Other Skills:</label>
+                <br>
+                <textarea name="Other-skills" id="Other-skills" placeholder="Write down your other skills here...." rows="6" cols="25"></textarea>
+        </div>
+
+
+        <br>
+
+        <input type="submit" value="Apply">
+    </form> 
+    <!-----------------------------26 mar------------------------------------>
+    <!-----------------------------28 mar------------------------------------>
+</body>
+</html>
