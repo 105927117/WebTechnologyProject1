@@ -60,4 +60,8 @@ header ul li {
 
 .cls-1 {
     fill: currentColor;
-  }
+}
+
+.current-page {
+    color: var(--secondary-color);
+}
