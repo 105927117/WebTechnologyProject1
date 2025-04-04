@@ -8,15 +8,16 @@ description: Styles for every page in this project.
 
 /* Define variables here */
 :root {
-    --main-color: black;
-    --background-color: white;
-    --accent-color: blue;
-    --secondary-color: red;
+    --background-colour: #F1FFFA;
+    --hover-colour: #CCFCCB;
+    --accent-color: #96E6B3;
+    --selected-colour: #568259;
+    --text-colour: #464E47;
 }
 
 /* Main body of the page */
 body {
-    color: var(--main-color);
+    color: var(--background-colour);
     background-color: var(--background-color);
     font-family: sans-serif;
     display: flex;
@@ -26,23 +27,33 @@ body {
 }
 
 header svg {
-    color: red;
+    color: var(--accent-color);
+    width: 20%;
+    height: 20%;
+    padding: 2rem;
 }
 
 /* Styles for header of the page */
 header {
-    background-color: var(--main-color);
+    background-color: var(--text-colour);
     color: var(--background-color);
 }
 
 /* Styles for the footer of the page */
 footer {
-    background-color: var(--main-color);
+    background-color: var(--text-colour);
     color: var(--background-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+}
+
+footer a{
+    color: var(--accent-color);
+}
+hr{
+ border-color: var(--accent-color);
 }
 
 /* Styles for list of links inside the nav of the header */
@@ -54,8 +65,22 @@ header ul {
 }
 
 /* Styles for the links inside the header */
-header ul li {
+header ul li a{
     padding: 1rem;
+    color: var(--background-colour);
+    text-decoration: none;
+    background-color: var(--selected-colour);
+    border-radius: 1rem;
+    width: 15vw;
+    text-align: center;
+    transition-duration: 0.25s;
+    display: inline-block;
+}
+
+header ul li a:hover{
+    background-color: var(--hover-colour);
+    color: var(--selected-colour);
+    box-shadow: 0.5rem 0.5rem;
 }
 
 .cls-1 {
@@ -63,5 +88,5 @@ header ul li {
 }
 
 .current-page {
-    color: var(--secondary-color);
+    color: var(--selected-colour);
 }
