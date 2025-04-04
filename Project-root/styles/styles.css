@@ -1,16 +1,59 @@
-/*This stylesheet is to be used across all html files for this website*/
-header > image, h1{
-    display:inline;
+/*
+filename: styles.css
+author: Alex Petrucci, Carl Petrucci, Kunvuth You, Mohamed Aarriz Mohamed Habeeb
+created: 02/04/2025
+last modified: 04/04/2025
+description: Styles for every page in this project.
+*/
+
+/* Define variables here */
+:root {
+    --main-color: black;
+    --background-color: white;
+    --accent-color: blue;
+    --secondary-color: red;
 }
 
-nav ul{
+/* Main body of the page */
+body {
+    color: var(--main-color);
+    background-color: var(--background-color);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+}
+
+header svg {
+    color: red;
+}
+
+/* Styles for header of the page */
+header {
+    background-color: var(--main-color);
+    color: var(--background-color);
+}
+
+/* Styles for the footer of the page */
+footer {
+    background-color: var(--main-color);
+    color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Styles for list of links inside the nav of the header */
+header ul {
     list-style: none;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
 }
 
-#footer_details{
-    display: flex;
-    justify-content: space-between;
-    padding: 1%;
+/* Styles for the links inside the header */
+header ul li {
+    padding: 1rem;
 }
