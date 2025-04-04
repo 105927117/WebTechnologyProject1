@@ -93,4 +93,5 @@ header ul {
 
 .current-page {
     color: var(--selected-colour);
+    background-color: var(--accent-color);
 }
