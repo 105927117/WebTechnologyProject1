@@ -83,6 +83,10 @@ header ul li a:hover{
     box-shadow: 0.5rem 0.5rem;
 }
 
+header ul {
+    padding: 0px;
+}
+
 .cls-1 {
     fill: currentColor;
 }
