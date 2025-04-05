@@ -142,11 +142,36 @@ h1, h2 {
     flex-direction: column;
     background-color: var(--accent-color);
     border-radius: 1rem;
-    padding: 1rem;
-    width: min(40rem, 80vw);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 40vw;
     margin: 1rem;
+    text-align: center;
+}
+
+.description-card img {
+    margin: 0px;
+    width: inherit;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
 }
 
 strong {
     color: var(--selected-colour);
+}
+
+#software-developer, #web-page-designer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#software-developer img, #web-page-designer img {
+    height: 50vh;
+}
+
+#software-developer article, #web-page-designer article {
+    flex: 1;
 }
