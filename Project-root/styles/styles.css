@@ -47,6 +47,11 @@ description: Styles for every page in this project.
     }
 }
 
+/* Make scrolling smooth when links to elements are clicked */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Main body of the page */
 body {
     color: var(--text-colour);
