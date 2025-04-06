@@ -11,12 +11,12 @@
 <body>
     <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
 
-        <div>
+        <div id="application-details">
             <h3>Applicant Details</h3>
-                <label for="Name">Name:</label><!--Add asterick(*) for required-->
-                <br>
-                <input type="text" name="First-Name" id="First-Name" pattern="[a-zA-Z\s]{0,20}" title="maximum 20 alphabetical characters limit" placeholder="First Name" required>
-                <input type="text" name="Last-Name" id="Last-Name" pattern="[a-zA-Z\s]{0,20}" title="maximum 20 alphabetical characters limit" placeholder="Last Name" required>
+                <label for="First-Name">First Name:</label><!--Add asterick(*) for required-->
+                <input type="text" name="first-name" id="first-name" pattern="[a-zA-Z\s]{0,20}" title="maximum 20 alphabetical characters limit" required>
+                <label for="Last Name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" pattern="[a-zA-Z\s]{0,20}" title="maximum 20 alphabetical characters limit" required>
                 <br>
             
                 <label for="Date-of-Birth">Date of Birth:</label>
@@ -35,7 +35,7 @@
                 </fieldset>
         </div>
 
-        <div>
+        <div id="contact-details">
             <h3>Contact Details</h3>
                 <label for="Street-Address">Street Address:</label>
                 <br>
@@ -66,7 +66,7 @@
                 <label for="Phone-number">Phone number:</label>
                 <input type="tel" name="Phone-number" id="Phone-number" pattern="[\d\s]{8,12}">
         </div>
-        <div>
+        <div id="job-application-details">
             <h3>Job Application Details</h3>
                 <label for="Job-reference-number">Job reference number</label>
                 <select name="Job-reference-number" id="Job-reference-number">
