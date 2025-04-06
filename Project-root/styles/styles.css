@@ -28,6 +28,7 @@ description: Styles for every page in this project.
     --contrast-text-colour: var(--black-colour);
 }
 
+/* Changing colour variables if user has their preference set to dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
         --background-colour: var(--black-colour);
