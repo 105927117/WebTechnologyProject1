@@ -159,9 +159,13 @@ h1, h2 {
     border-radius: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    width: 40vw;
-    margin: 1rem;
+    width: min(40rem, 80vw);
     text-align: center;
+}
+
+/* Styles for job description cards to ensure that items remain centered after being wrapped */
+.card-wrapper, .description-card:first-child, .description-card:last-child {
+    margin: 1rem auto;
 }
 
 /* Styles for images which go inside description cards */
@@ -188,10 +192,15 @@ strong {
 
 /* Styles for the images inside the detailed sections of the job descripions page */
 #software-developer img, #web-page-designer img {
-    height: 50vh;
+    width: min(80vw, 30rem);
 }
 
 /* Styles for the articles inside the detailed sections of the job descriptions page */
 #software-developer article, #web-page-designer article {
     flex: 1;
+}
+
+/* Styles for specific links to make all the text fit on one line for smaller screens */
+aside a, .description-card a {
+    width: auto;
 }
