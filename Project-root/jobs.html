@@ -15,7 +15,9 @@
 <body>
     <!--Header of the page-->
     <header>
+        <!--Logo inside link so that it can be clicked to go back to the home page-->
         <a href="index.html">
+            <!--SVG for logo embeded in the html so that its colour can be controlled through css-->
             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570.05 92.1" alt="ClickMaXXing Logo">
                 <defs>
                 </defs>
@@ -52,7 +54,6 @@
         <!--Navigation links-->
         <nav>
             <ul>
-                <!--ADD 'class="current-page"' TO THE LINK FOR THE PAGE YOUR ARE CURRENTLY ON-->
                 <li><a href="index.html">Home</a></li>
                 <li><a href="jobs.html" class="current-page">Jobs</a></li>
                 <li><a href="apply.html">Apply</a></li>
@@ -61,44 +62,55 @@
         </nav>
         <hr>
     </header>
+    <!--Main content of the page-->
     <main>
+        <!--Aside section which redirects user to applications page so that they can apply-->
         <aside>
             <h2>How Do I Apply?</h2>
             <p>We are hiring! To apply for one of our available jobs, just head over to our job applications page by clicking the 'Apply' link in the navagation bar at the top of the website, or the link below.</p>
+            <!--Div below centers the link within it-->
             <div class="center-wrapper"><a href="apply.html">Apply Now</a></div>
         </aside>
         <h1>Job Descriptions</h1>
+        <!--Section for giving users an overview of the company-->
         <section>
             <h2>Company Description</h2>
             <p>ClickMaXXing, we are committed to driving innovation and delivering high-quality IT services to businesses worldwide. Our team of skilled professionals specializes in software development, cybersecurity, cloud computing, AI, and IT consulting. We believe in fostering a dynamic and inclusive work environment that encourages creativity and career growth.</p>
         </section>
         <br>
+        <!--Section which contains cards whith an overview of each position description-->
         <section>
             <h1>Positions</h1>
+            <!--Div below puts the cards in a flexbox so that they can adjust their positions for different screen sizes-->
             <div class="card-wrapper">
+                <!--Overview for software developer job-->
                 <article class="description-card">
                     <h2>Software Developer</h2>
                     <p>Reference No. CG7D5</p>
                     <!--IMAGE BELOW IS AI GENERATED-->
                     <img src="images/job_descriptions_software_dev.png" alt="Group of software developers in a meeting.">
                     <p>Develop both the front-end and the backend for performant, user-friendly and functional websites.</p>
+                    <!--Link below redirects user to a more detailed job description-->
                     <a href="#software-developer">More Info</a>
                 </article>
+                <!--Overview for web page designer job-->
                 <article class="description-card">
                     <h2>Web Page Designer</h2>
                     <p>Reference No. Z5KFG</p>
                     <!--IMAGE BELOW IS AI GENERATED-->
                     <img src="images/job_descriptions_web_designer.png" alt="A computer with an artistic web page design on it.">
                     <p>Fine tune the aesthetics and user experience of websites.</p>
+                    <!--Link below redirects user to a more detailed job description-->
                     <a href="#web-page-designer">More Info</a>
                 </article>
             </div>
         </section>
         <hr>
+        <!--Detailed job description for software developer-->
         <section id="software-developer">
+            <!--IMAGE BELOW IS AI GENERATED-->
             <img src="images/job_descriptions_software_dev_2.png" alt="A group of software developers discussing code." class="description-img">
             <article>
-                <!--IMAGE BELOW IS AI GENERATED-->
                 <h2>Software Developer</h2>
                 <p>Reference No. CG7D5</p>
                 <ul>
@@ -139,6 +151,7 @@
             </article>
         </section>
         <hr>
+        <!--Detailed job description for web page designer-->
         <section id="web-page-designer">
             <!--IMAGE BELOW IS AI GENERATED-->
             <img src="images/job_descriptions_web_designer_2.png" alt="Designers collaborating to make a website.">

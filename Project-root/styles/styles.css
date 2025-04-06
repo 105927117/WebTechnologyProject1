@@ -26,6 +26,7 @@ body {
     margin: 0px;
 }
 
+/* Styles for logo in the header of the page */
 header svg {
     color: var(--accent-color);
     width: 20%;
@@ -49,15 +50,18 @@ footer {
     padding: 1rem;
 }
 
+/* Styles for the email link inside the footer of the page */
 footer a{
     color: var(--accent-color);
 }
 
+/* Styles for the regular text inside the footer of the page */
 footer p {
     color: var(--background-colour);
 }
 
-hr{
+/* Styles for any horizontal lines on any page */
+hr {
  border-color: var(--accent-color);
 }
 
@@ -69,7 +73,7 @@ header ul {
     justify-content: space-around;
 }
 
-/* Styles for the links inside the header */
+/* Styles for the links disguised as buttons */
 header ul li a, main a {
     padding: 1rem;
     color: var(--background-colour);
@@ -82,29 +86,35 @@ header ul li a, main a {
     display: inline-block;
 }
 
+/* Styles for links disguised as buttons, when they are hovered */
 header ul li a:hover, main a:hover{
     background-color: var(--hover-colour);
     color: var(--selected-colour);
     box-shadow: 0.5rem 0.5rem;
 }
 
+/* Styles for list of nav links inside the header of the page */
 header ul {
     padding: 0px;
 }
 
+/* Specific style for SVG logo with auto generated class name so that the colour can be changed */
 .cls-1 {
     fill: currentColor;
 }
 
+/* Styles for link of the current page inside the navigation in the header of the page */
 .current-page {
     color: var(--selected-colour);
     background-color: var(--accent-color);
 }
 
+/* Styles for the main content of the page */
 main {
     padding: 2rem;
 }
 
+/* Styles for any aside elements on any page */
 aside {
     float: right;
     background-color: var(--text-colour);
@@ -115,19 +125,23 @@ aside {
     margin: 1rem;
 }
 
+/* Styles for headings inside aside elements */
 aside h1, aside h2 {
     color: var(--accent-color);
 }
 
+/* Styles for headings on any page */
 h1, h2 {
     color: var(--selected-colour);
 }
 
+/* Styles for class which is designed to center content inside */
 .center-wrapper {
     display: flex;
     justify-content: center;
 }
 
+/* Styles for container which is meant to hold cards containing content */
 .card-wrapper {
     display: flex;
     justify-content: space-around;
@@ -135,6 +149,7 @@ h1, h2 {
     flex-wrap: wrap;
 }
 
+/* Styles for cards on the job descriptions page which give an overview of the jobs */
 .description-card {
     display: flex;
     justify-content: space-between;
@@ -149,6 +164,7 @@ h1, h2 {
     text-align: center;
 }
 
+/* Styles for images which go inside description cards */
 .description-card img {
     margin: 0px;
     width: inherit;
@@ -156,10 +172,12 @@ h1, h2 {
     object-fit: cover;
 }
 
+/* Styles for important text */
 strong {
     color: var(--selected-colour);
 }
 
+/* Styles for the detailed description sections found on the job descriptions page */
 #software-developer, #web-page-designer {
     display: flex;
     flex-wrap: wrap;
@@ -168,10 +186,12 @@ strong {
     align-items: center;
 }
 
+/* Styles for the images inside the detailed sections of the job descripions page */
 #software-developer img, #web-page-designer img {
     height: 50vh;
 }
 
+/* Styles for the articles inside the detailed sections of the job descriptions page */
 #software-developer article, #web-page-designer article {
     flex: 1;
 }
