@@ -16,26 +16,33 @@ description: Styles for every page in this project.
 
     --background-colour: var(--white-colour);
     --hover-colour: var(--light-green-colour);
+    --hover-text-colour: var(--dark-green-colour);
     --accent-color: var(--green-colour);
     --text-colour: var(--black-colour);
     --header-colour: var(--black-colour);
     --header-text-colour: var(--white-colour);
     --button-colour: var(--dark-green-colour);
     --button-text-colour: var(--white-colour);
-    --hover-colour: var(--dark-green-colour);
-    --hover-text-colour: var(--light-green-colour);
+    --heading-colour: var(--dark-green-colour);
+    --contrast-heading-colour: var(--dark-green-colour);
+    --contrast-text-colour: var(--black-colour);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background-colour: var(--black-colour);
-        --hover-colour: var(--light-green-colour);
+        --hover-colour: var(--black-colour);
+        --hover-text-colour: var(--light-green-colour);
         --accent-color: var(--green-colour);
         --text-colour: var(--white-colour);
         --header-colour: var(--dark-green-colour);
         --header-text-colour: var(--white-colour);
         --button-colour: var(--light-green-colour);
         --button-text-colour: var(--dark-green-colour);
+        --heading-colour: var(--light-green-colour);
+        --contrast-heading-colour: var(--dark-green-colour);
+        --contrast-text-colour: var(--black-colour);
+        
     }
 }
 
@@ -85,7 +92,7 @@ footer p {
 
 /* Styles for any horizontal lines on any page */
 hr {
- border-color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 /* Styles for list of links inside the nav of the header */
@@ -128,7 +135,7 @@ header ul {
 
 /* Styles for link of the current page inside the navigation in the header of the page */
 .current-page {
-    color: var(--hover-text-colour);
+    color: var(--contrast-text-colour);
     background-color: var(--accent-color);
 }
 
@@ -155,7 +162,7 @@ aside h1, aside h2 {
 
 /* Styles for headings on any page */
 h1, h2 {
-    color: var(--selected-colour);
+    color: var(--heading-colour);
 }
 
 /* Styles for class which is designed to center content inside */
@@ -186,6 +193,16 @@ h1, h2 {
     text-align: center;
 }
 
+/* Styles for headings inside description cards */
+.description-card h1, .description-card h2 {
+    color: var(--contrast-heading-colour);
+}
+
+/* Styles for regular text inside description cards */
+.description-card p {
+    color: var(--contrast-text-colour);
+}
+
 /* Styles for job description cards to ensure that items remain centered after being wrapped */
 .card-wrapper, .description-card:first-child, .description-card:last-child {
     margin: 1rem auto;
@@ -201,7 +218,7 @@ h1, h2 {
 
 /* Styles for important text */
 strong {
-    color: var(--selected-colour);
+    color: var(--heading-colour);
 }
 
 /* Styles for the detailed description sections found on the job descriptions page */
