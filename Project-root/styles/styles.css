@@ -8,17 +8,48 @@ description: Styles for every page in this project.
 
 /* Define variables here */
 :root {
-    --background-colour: #F1FFFA;
-    --hover-colour: #CCFCCB;
-    --accent-color: #96E6B3;
-    --selected-colour: #568259;
-    --text-colour: #464E47;
+    --white-colour: #F1FFFA;
+    --light-green-colour: #CCFCCB;
+    --green-colour: #96E6B3;
+    --dark-green-colour: #568259;
+    --black-colour: #464E47;
+
+    --background-colour: var(--white-colour);
+    --hover-colour: var(--light-green-colour);
+    --hover-text-colour: var(--dark-green-colour);
+    --accent-color: var(--green-colour);
+    --text-colour: var(--black-colour);
+    --header-colour: var(--black-colour);
+    --header-text-colour: var(--white-colour);
+    --button-colour: var(--dark-green-colour);
+    --button-text-colour: var(--white-colour);
+    --heading-colour: var(--dark-green-colour);
+    --contrast-heading-colour: var(--dark-green-colour);
+    --contrast-text-colour: var(--black-colour);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-colour: var(--black-colour);
+        --hover-colour: var(--black-colour);
+        --hover-text-colour: var(--light-green-colour);
+        --accent-color: var(--green-colour);
+        --text-colour: var(--white-colour);
+        --header-colour: var(--dark-green-colour);
+        --header-text-colour: var(--white-colour);
+        --button-colour: var(--light-green-colour);
+        --button-text-colour: var(--dark-green-colour);
+        --heading-colour: var(--light-green-colour);
+        --contrast-heading-colour: var(--dark-green-colour);
+        --contrast-text-colour: var(--black-colour);
+        
+    }
 }
 
 /* Main body of the page */
 body {
     color: var(--text-colour);
-    background-color: var(--background-color);
+    background-color: var(--background-colour);
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -36,14 +67,13 @@ header svg {
 
 /* Styles for header of the page */
 header {
-    background-color: var(--text-colour);
-    color: var(--background-color);
+    background-color: var(--header-colour);
+    color: var(--header-text-colour);
 }
 
 /* Styles for the footer of the page */
 footer {
-    background-color: var(--text-colour);
-    color: var(--background-color);
+    background-color: var(--header-colour);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,12 +87,12 @@ footer a{
 
 /* Styles for the regular text inside the footer of the page */
 footer p {
-    color: var(--background-colour);
+    color: var(--header-text-colour);
 }
 
 /* Styles for any horizontal lines on any page */
 hr {
- border-color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 /* Styles for list of links inside the nav of the header */
@@ -76,9 +106,9 @@ header ul {
 /* Styles for the links disguised as buttons */
 header ul li a, main a {
     padding: 1rem;
-    color: var(--background-colour);
+    color: var(--button-text-colour);
     text-decoration: none;
-    background-color: var(--selected-colour);
+    background-color: var(--button-colour);
     border-radius: 1rem;
     width: 15vw;
     text-align: center;
@@ -89,7 +119,7 @@ header ul li a, main a {
 /* Styles for links disguised as buttons, when they are hovered */
 header ul li a:hover, main a:hover{
     background-color: var(--hover-colour);
-    color: var(--selected-colour);
+    color: var(--hover-text-colour);
     box-shadow: 0.5rem 0.5rem;
 }
 
@@ -105,7 +135,7 @@ header ul {
 
 /* Styles for link of the current page inside the navigation in the header of the page */
 .current-page {
-    color: var(--selected-colour);
+    color: var(--contrast-text-colour);
     background-color: var(--accent-color);
 }
 
@@ -117,8 +147,8 @@ main {
 /* Styles for any aside elements on any page */
 aside {
     float: right;
-    background-color: var(--text-colour);
-    color: var(--background-colour);
+    background-color: var(--header-colour);
+    color: var(--header-text-colour);
     border-radius: 1rem;
     padding: 1rem;
     width: max(20vw, 15rem);
@@ -132,7 +162,7 @@ aside h1, aside h2 {
 
 /* Styles for headings on any page */
 h1, h2 {
-    color: var(--selected-colour);
+    color: var(--heading-colour);
 }
 
 /* Styles for class which is designed to center content inside */
@@ -163,6 +193,16 @@ h1, h2 {
     text-align: center;
 }
 
+/* Styles for headings inside description cards */
+.description-card h1, .description-card h2 {
+    color: var(--contrast-heading-colour);
+}
+
+/* Styles for regular text inside description cards */
+.description-card p {
+    color: var(--contrast-text-colour);
+}
+
 /* Styles for job description cards to ensure that items remain centered after being wrapped */
 .card-wrapper, .description-card:first-child, .description-card:last-child {
     margin: 1rem auto;
@@ -178,7 +218,7 @@ h1, h2 {
 
 /* Styles for important text */
 strong {
-    color: var(--selected-colour);
+    color: var(--heading-colour);
 }
 
 /* Styles for the detailed description sections found on the job descriptions page */
