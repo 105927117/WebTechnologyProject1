@@ -67,9 +67,8 @@ body {
 /* Styles for logo in the header of the page */
 header svg {
     color: var(--accent-color);
-    width: 20%;
-    height: 20%;
-    padding: 2rem;
+    width: min(100vw, 20rem);
+    padding: 1rem;
 }
 
 /* Styles for header of the page */
