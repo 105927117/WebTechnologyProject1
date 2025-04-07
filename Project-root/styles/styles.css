@@ -250,3 +250,19 @@ strong {
 aside a, .description-card a {
     width: auto;
 }
+
+/*Styles for the body content of the index page*/
+#maincontent{
+    width: 80%; 
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--green-colour);
+
+    box-shadow: 10px 10px 10px 10px black;
+    border-radius: 8px;
+    color: var(--black-colour);
+
+    
+}
+
+
