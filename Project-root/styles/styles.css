@@ -250,3 +250,19 @@ strong {
 aside a, .description-card a {
     width: auto;
 }
+
+/*Styles for tables to ensure that the borders of table cells is vissible*/
+table,td, th{
+    border: solid var(--black-colour) 0.1rem;
+}
+
+/*Styles to remove double borders from table cells*/
+table{
+    border-spacing: 0;
+}
+
+/*Styles to maintain proper scale of images for group member profiles*/
+dd figure img{
+    width: 20rem;
+    height: 15rem;
+}
