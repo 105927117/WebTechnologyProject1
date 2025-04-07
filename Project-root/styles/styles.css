@@ -8,42 +8,43 @@ description: Styles for every page in this project.
 
 /* Define variables here */
 :root {
-    --white-colour: #F1FFFA;
-    --light-green-colour: #CCFCCB;
-    --green-colour: #96E6B3;
-    --dark-green-colour: #568259;
-    --black-colour: #464E47;
+    --light-colour: #f4f4f4;
+    --dark-colour: #1d1d1d;
+    --mid-colour: #247c77;
+    --accent-colour-1: #1AA8A1;
+    --accent-colour-2: #495298;
 
-    --background-colour: var(--white-colour);
-    --hover-colour: var(--light-green-colour);
-    --hover-text-colour: var(--dark-green-colour);
-    --accent-color: var(--green-colour);
-    --text-colour: var(--black-colour);
-    --header-colour: var(--black-colour);
-    --header-text-colour: var(--white-colour);
-    --button-colour: var(--dark-green-colour);
-    --button-text-colour: var(--white-colour);
-    --heading-colour: var(--dark-green-colour);
-    --contrast-heading-colour: var(--dark-green-colour);
-    --contrast-text-colour: var(--black-colour);
+    --background-colour: var(--light-colour);
+    --hover-colour: var(--mid-colour);
+    --hover-text-colour: var(--dark-colour);
+    --hover-shadow-colour: var(--accent-colour-2);
+    --accent-color: var(--accent-colour-1);
+    --text-colour: var(--dark-colour);
+    --header-colour: var(--dark-colour);
+    --header-text-colour: var(--light-colour);
+    --button-colour: var(--accent-colour-2);
+    --button-text-colour: var(--light-colour);
+    --heading-colour: var(--accent-colour-2);
+    --contrast-heading-colour: var(--accent-colour-1);
+    --contrast-text-colour: var(--light-colour);
 }
 
 /* Changing colour variables if user has their preference set to dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-colour: var(--black-colour);
-        --hover-colour: var(--black-colour);
-        --hover-text-colour: var(--light-green-colour);
-        --accent-color: var(--green-colour);
-        --text-colour: var(--white-colour);
-        --header-colour: var(--dark-green-colour);
-        --header-text-colour: var(--white-colour);
-        --button-colour: var(--light-green-colour);
-        --button-text-colour: var(--dark-green-colour);
-        --heading-colour: var(--light-green-colour);
-        --contrast-heading-colour: var(--dark-green-colour);
-        --contrast-text-colour: var(--black-colour);
-        
+        --background-colour: var(--dark-colour);
+        --hover-colour: var(--mid-colour);
+        --hover-text-colour: var(--dark-colour);
+        --hover-shadow-colour: var(--accent-colour-2);
+        --accent-color: var(--accent-colour-1);
+        --text-colour: var(--light-colour);
+        --header-colour: var(--light-colour);
+        --header-text-colour: var(--dark-colour);
+        --button-colour: var(--accent-colour-2);
+        --button-text-colour: var(--light-colour);
+        --heading-colour: var(--accent-colour-1);
+        --contrast-heading-colour: var(--accent-colour-2);
+        --contrast-text-colour: var(--light-colour);
     }
 }
 
@@ -88,7 +89,7 @@ footer {
 
 /* Styles for the email link inside the footer of the page */
 footer a{
-    color: var(--accent-color);
+    color: var(--contrast-heading-colour);
 }
 
 /* Styles for the regular text inside the footer of the page */
@@ -126,7 +127,7 @@ header ul li a, main a {
 header ul li a:hover, main a:hover{
     background-color: var(--hover-colour);
     color: var(--hover-text-colour);
-    box-shadow: 0.5rem 0.5rem;
+    box-shadow: 0.5rem 0.5rem var(--hover-shadow-colour);
 }
 
 /* Styles for list of nav links inside the header of the page */
@@ -141,7 +142,7 @@ header ul {
 
 /* Styles for link of the current page inside the navigation in the header of the page */
 .current-page {
-    color: var(--contrast-text-colour);
+    color: var(--dark-colour);
     background-color: var(--accent-color);
 }
 
@@ -163,7 +164,7 @@ aside {
 
 /* Styles for headings inside aside elements */
 aside h1, aside h2 {
-    color: var(--accent-color);
+    color: var(--contrast-heading-colour);
 }
 
 /* Styles for headings on any page */
@@ -191,7 +192,7 @@ h1, h2 {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    background-color: var(--accent-color);
+    background-color: var(--header-colour);
     border-radius: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -206,7 +207,7 @@ h1, h2 {
 
 /* Styles for regular text inside description cards */
 .description-card p {
-    color: var(--contrast-text-colour);
+    color: var(--header-text-colour);
 }
 
 /* Styles for job description cards to ensure that items remain centered after being wrapped */
