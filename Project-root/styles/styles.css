@@ -2,23 +2,60 @@
 filename: styles.css
 author: Alex Petrucci, Carl Petrucci, Kunvuth You, Mohamed Aarriz Mohamed Habeeb
 created: 02/04/2025
-last modified: 04/04/2025
+last modified: 06/04/2025
 description: Styles for every page in this project.
 */
 
 /* Define variables here */
 :root {
-    --background-colour: #F1FFFA;
-    --hover-colour: #CCFCCB;
-    --accent-color: #96E6B3;
-    --selected-colour: #568259;
-    --text-colour: #464E47;
+    --white-colour: #F1FFFA;
+    --light-green-colour: #CCFCCB;
+    --green-colour: #96E6B3;
+    --dark-green-colour: #568259;
+    --black-colour: #464E47;
+
+    --background-colour: var(--white-colour);
+    --hover-colour: var(--light-green-colour);
+    --hover-text-colour: var(--dark-green-colour);
+    --accent-color: var(--green-colour);
+    --text-colour: var(--black-colour);
+    --header-colour: var(--black-colour);
+    --header-text-colour: var(--white-colour);
+    --button-colour: var(--dark-green-colour);
+    --button-text-colour: var(--white-colour);
+    --heading-colour: var(--dark-green-colour);
+    --contrast-heading-colour: var(--dark-green-colour);
+    --contrast-text-colour: var(--black-colour);
+}
+
+/* Changing colour variables if user has their preference set to dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-colour: var(--black-colour);
+        --hover-colour: var(--black-colour);
+        --hover-text-colour: var(--light-green-colour);
+        --accent-color: var(--green-colour);
+        --text-colour: var(--white-colour);
+        --header-colour: var(--dark-green-colour);
+        --header-text-colour: var(--white-colour);
+        --button-colour: var(--light-green-colour);
+        --button-text-colour: var(--dark-green-colour);
+        --heading-colour: var(--light-green-colour);
+        --contrast-heading-colour: var(--dark-green-colour);
+        --contrast-text-colour: var(--black-colour);
+        
+    }
+}
+
+/* Make scrolling smooth when links to elements are clicked */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Main body of the page */
 body {
-    color: var(--background-colour);
-    background-color: var(--background-color);
+    color: var(--text-colour);
+    background-color: var(--background-colour);
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -26,6 +63,7 @@ body {
     margin: 0px;
 }
 
+/* Styles for logo in the header of the page */
 header svg {
     color: var(--accent-color);
     width: 20%;
@@ -35,25 +73,32 @@ header svg {
 
 /* Styles for header of the page */
 header {
-    background-color: var(--text-colour);
-    color: var(--background-color);
+    background-color: var(--header-colour);
+    color: var(--header-text-colour);
 }
 
 /* Styles for the footer of the page */
 footer {
-    background-color: var(--text-colour);
-    color: var(--background-color);
+    background-color: var(--header-colour);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
 }
 
+/* Styles for the email link inside the footer of the page */
 footer a{
     color: var(--accent-color);
 }
-hr{
- border-color: var(--accent-color);
+
+/* Styles for the regular text inside the footer of the page */
+footer p {
+    color: var(--header-text-colour);
+}
+
+/* Styles for any horizontal lines on any page */
+hr {
+    border-color: var(--accent-color);
 }
 
 /* Styles for list of links inside the nav of the header */
@@ -64,12 +109,12 @@ header ul {
     justify-content: space-around;
 }
 
-/* Styles for the links inside the header */
-header ul li a{
+/* Styles for the links disguised as buttons */
+header ul li a, main a {
     padding: 1rem;
-    color: var(--background-colour);
+    color: var(--button-text-colour);
     text-decoration: none;
-    background-color: var(--selected-colour);
+    background-color: var(--button-colour);
     border-radius: 1rem;
     width: 15vw;
     text-align: center;
@@ -77,16 +122,147 @@ header ul li a{
     display: inline-block;
 }
 
-header ul li a:hover{
+/* Styles for links disguised as buttons, when they are hovered */
+header ul li a:hover, main a:hover{
     background-color: var(--hover-colour);
-    color: var(--selected-colour);
+    color: var(--hover-text-colour);
     box-shadow: 0.5rem 0.5rem;
 }
 
+/* Styles for list of nav links inside the header of the page */
+header ul {
+    padding: 0px;
+}
+
+/* Specific style for SVG logo with auto generated class name so that the colour can be changed */
 .cls-1 {
     fill: currentColor;
 }
 
+/* Styles for link of the current page inside the navigation in the header of the page */
 .current-page {
-    color: var(--selected-colour);
+    color: var(--contrast-text-colour);
+    background-color: var(--accent-color);
+}
+
+/* Styles for the main content of the page */
+main {
+    padding: 2rem;
+}
+
+/* Styles for any aside elements on any page */
+aside {
+    float: right;
+    background-color: var(--header-colour);
+    color: var(--header-text-colour);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: max(20vw, 15rem);
+    margin: 1rem;
+}
+
+/* Styles for headings inside aside elements */
+aside h1, aside h2 {
+    color: var(--accent-color);
+}
+
+/* Styles for headings on any page */
+h1, h2 {
+    color: var(--heading-colour);
+}
+
+/* Styles for class which is designed to center content inside */
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Styles for container which is meant to hold cards containing content */
+.card-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Styles for cards on the job descriptions page which give an overview of the jobs */
+.description-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--accent-color);
+    border-radius: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: min(40rem, 80vw);
+    text-align: center;
+}
+
+/* Styles for headings inside description cards */
+.description-card h1, .description-card h2 {
+    color: var(--contrast-heading-colour);
+}
+
+/* Styles for regular text inside description cards */
+.description-card p {
+    color: var(--contrast-text-colour);
+}
+
+/* Styles for job description cards to ensure that items remain centered after being wrapped */
+.card-wrapper, .description-card:first-child, .description-card:last-child {
+    margin: 1rem auto;
+}
+
+/* Styles for images which go inside description cards */
+.description-card img {
+    margin: 0px;
+    width: inherit;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+}
+
+/* Styles for important text */
+strong {
+    color: var(--heading-colour);
+}
+
+/* Styles for the detailed description sections found on the job descriptions page */
+#software-developer, #web-page-designer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styles for the images inside the detailed sections of the job descripions page */
+#software-developer img, #web-page-designer img {
+    width: min(80vw, 30rem);
+}
+
+/* Styles for the articles inside the detailed sections of the job descriptions page */
+#software-developer article, #web-page-designer article {
+    flex: 1;
+}
+
+/* Styles for specific links to make all the text fit on one line for smaller screens */
+aside a, .description-card a {
+    width: auto;
+}
+
+/*Styles for tables to ensure that the borders of table cells is vissible*/
+table,td, th{
+    border: solid var(--black-colour) 0.1rem;
+}
+
+/*Styles to remove double borders from table cells*/
+table{
+    border-spacing: 0;
+}
+
+/*Styles to maintain proper scale of images for group member profiles*/
+dd figure img{
+    width: 20rem;
+    height: 15rem;
 }
