@@ -63,19 +63,24 @@
     </header>
     <!--Main content of the page-->
     <main>
-        <!--Aside section which redirects user to applications page so that they can apply-->
-        <aside>
-            <h2>How Do I Apply?</h2>
-            <p>We are hiring! To apply for one of our available jobs, just head over to our job applications page by clicking the 'Apply' link in the navagation bar at the top of the website, or the link below.</p>
-            <!--Div below centers the link within it-->
-            <div class="center-wrapper"><a href="apply.html">Apply Now</a></div>
-        </aside>
-        <h1>Job Descriptions</h1>
-        <!--Section for giving users an overview of the company-->
-        <section>
-            <h2>Company Description</h2>
-            <p>ClickMaXXing, we are committed to driving innovation and delivering high-quality IT services to businesses worldwide. Our team of skilled professionals specializes in software development, cybersecurity, cloud computing, AI, and IT consulting. We believe in fostering a dynamic and inclusive work environment that encourages creativity and career growth.</p>
-        </section>
+        <!--Make sure that aside appears above on smaller screens or next to on larger screens-->
+        <div class="space-between-wrapper row-reverse">
+            <!--Aside section which redirects user to applications page so that they can apply-->
+            <aside>
+                <h2>How Do I Apply?</h2>
+                <p>We are hiring! To apply for one of our available jobs, just head over to our job applications page by clicking the 'Apply' link in the navagation bar at the top of the website, or the link below.</p>
+                <!--Div below centers the link within it-->
+                <div class="center-wrapper"><a href="apply.html">Apply Now</a></div>
+            </aside>
+            <div class="takeup-available-space">
+                <h1>Job Descriptions</h1>
+                <!--Section for giving users an overview of the company-->
+                <section>
+                    <h2>Company Description</h2>
+                    <p>ClickMaXXing, we are committed to driving innovation and delivering high-quality IT services to businesses worldwide. Our team of skilled professionals specializes in software development, cybersecurity, cloud computing, AI, and IT consulting. We believe in fostering a dynamic and inclusive work environment that encourages creativity and career growth.</p>
+                </section>
+            </div>
+        </div>
         <br>
         <!--Section which contains cards whith an overview of each position description-->
         <section>
@@ -153,7 +158,7 @@
         <!--Detailed job description for web page designer-->
         <section id="web-page-designer">
             <!--IMAGE BELOW IS AI GENERATED-->
-            <img src="images/job_descriptions_web_designer_2.png" alt="Designers collaborating to make a website.">
+            <img src="images/job_descriptions_web_designer_2.png" alt="Designers collaborating to make a website." class="description-img">
             <article>
                 <h2>Web Page Designer</h2>
                 <p>Reference No. Z5KFG</p>
