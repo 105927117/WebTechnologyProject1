@@ -44,7 +44,7 @@ description: Styles for every page in this project.
         --button-text-colour: var(--light-colour);
         --heading-colour: var(--accent-colour-1);
         --contrast-heading-colour: var(--accent-colour-2);
-        --contrast-text-colour: var(--light-colour);
+        --contrast-text-colour: var(--dark-colour);
     }
 }
 
@@ -344,13 +344,12 @@ input:focus, textarea:focus, select:focus {
     outline: none;
 }
 
-/* Fieldset styling */
 fieldset {
-    border: 1px solid var(--border-color);
-    padding: 1.5rem;
-    border-radius: 0.375rem;
-    margin-top: 1.5rem;
-    background-color: var(--header-colour);
+    border-radius: 0.75rem;
+}
+
+fieldset label {
+    color: var(--contrast-text-colour);
 }
 
 /* Legend styling */
@@ -358,6 +357,24 @@ legend {
     font-weight: bold;
     font-size: 1.1rem;
     color: var(--selected-color);
+}
+
+.gender-options {
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 0.375rem;
+    margin-top: 1.5rem;
+    background-color: var(--header-colour);
+}
+
+.radio-label {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+.radio-label * {
+    width: 5rem;
 }
 
 /* Button styles */
