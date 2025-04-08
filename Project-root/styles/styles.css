@@ -267,12 +267,17 @@ aside a, .description-card a {
 
 /*Styles for tables to ensure that the borders of table cells is vissible*/
 table,td, th{
-    border: solid var(--black-colour) 0.1rem;
+    border: solid var(--dark-colour) 0.1rem;
 }
 
-/*Styles to remove double borders from table cells*/
+td strong{
+    color: var(--dark-colour);
+}
+
+/*Styles to remove double borders from table cells and give the table a different background colour*/
 table{
     border-spacing: 0;
+    background-color: var(--accent-colour-1);
 }
 
 /*Styles to maintain proper scale of images for group member profiles*/
