@@ -10,9 +10,9 @@ description: Styles for every page in this project.
 :root {
     --light-colour: #f4f4f4;
     --dark-colour: #1d1d1d;
-    --mid-colour: #247c77;
-    --accent-colour-1: #1AA8A1;
-    --accent-colour-2: #495298;
+    --mid-colour: #1AA8A1;
+    --accent-colour-1: #b8f8f6;
+    --accent-colour-2: #01515c;
 
     --background-colour: var(--light-colour);
     --hover-colour: var(--mid-colour);
@@ -267,7 +267,7 @@ aside a, .description-card a {
 /*-----------------------------------ABOUT------------------------------------------------------------------*/
 
 /*Styles for tables to ensure that the borders of table cells is vissible*/
-table,td, th{
+table, td, th{
     border: solid var(--dark-colour) 0.1rem;
 }
 
@@ -286,6 +286,17 @@ table{
 dd figure img{
     width: 20rem;
     height: 15rem;
+}
+
+/* #member-profiles{
+    display: flex;
+} */
+
+.member-profile{
+    display: flex;
+    background-color: var(--accent-colour-1);
+    border-radius: 1%;
+    margin: 12rem;
 }
 /*-----------------------------------APPLY-------------------------------------------------------------------*/
 
