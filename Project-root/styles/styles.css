@@ -264,12 +264,14 @@ strong {
 aside a, .description-card a {
     width: auto;
 }
+/*-----------------------------------ABOUT------------------------------------------------------------------*/
 
 /*Styles for tables to ensure that the borders of table cells is vissible*/
 table,td, th{
     border: solid var(--dark-colour) 0.1rem;
 }
 
+/*Styles to change how bold text looks inside of the table since it looked bad using bold styles standards used for the rest of the website*/
 td strong{
     color: var(--dark-colour);
 }
