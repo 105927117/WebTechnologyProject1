@@ -152,13 +152,12 @@ main {
 
 /* Styles for any aside elements on any page */
 aside {
-    float: right;
     background-color: var(--header-colour);
     color: var(--header-text-colour);
     border-radius: 1rem;
     padding: 1rem;
     width: max(20vw, 15rem);
-    margin: 1rem;
+    margin: 1rem auto;
 }
 
 /* Styles for headings inside aside elements */
@@ -175,6 +174,19 @@ h1, h2 {
 .center-wrapper {
     display: flex;
     justify-content: center;
+}
+
+/* Styles for class which is designed to add space between content inside */
+.space-between-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Styles to change the direction of a flexbox to row-reverse */
+.row-reverse {
+    flex-direction: row-reverse;
 }
 
 /* Styles for container which is meant to hold cards containing content */
@@ -197,6 +209,7 @@ h1, h2 {
     padding-bottom: 1rem;
     width: min(40rem, 80vw);
     text-align: center;
+    margin: 1rem auto;
 }
 
 /* Styles for headings inside description cards */
@@ -209,17 +222,23 @@ h1, h2 {
     color: var(--header-text-colour);
 }
 
-/* Styles for job description cards to ensure that items remain centered after being wrapped */
-.card-wrapper, .description-card:first-child, .description-card:last-child {
-    margin: 1rem auto;
-}
-
 /* Styles for images which go inside description cards */
 .description-card img {
     margin: 0px;
     width: inherit;
     aspect-ratio: 2 / 1;
     object-fit: cover;
+}
+
+/* Styles for flexbox items to size based on the available space */
+.takeup-available-space {
+    flex: 1;
+}
+
+/* Styles for the images inside the detailed sections of the job descripions page */
+.description-img {
+    margin: 1rem auto;
+    width: min(80vw, 20rem);
 }
 
 /* Styles for important text */
@@ -234,11 +253,6 @@ strong {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-}
-
-/* Styles for the images inside the detailed sections of the job descripions page */
-#software-developer img, #web-page-designer img {
-    width: min(80vw, 30rem);
 }
 
 /* Styles for the articles inside the detailed sections of the job descriptions page */
