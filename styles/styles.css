@@ -324,7 +324,7 @@ input, textarea, select {
     font-size: var(--font-size-base);
     margin-bottom: 1.5rem;
     box-sizing: border-box;
-    transition: border-color 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 /*Box size and color for input type=radio, checkbox*/
 .selection-box{
@@ -363,18 +363,14 @@ legend {
 /* Button styles */
 .form-buttons {
     padding: 1rem;
-    color: var(--background-color);
+    color: var(--button-text-colour);
     text-decoration: none;
-    background-color: var(--heading-color);
+    background-color: var(--button-colour);
     border-radius: 1rem;
-    width: 25%;
-    min-width: 150px;
+    width: 15vw;
     text-align: center;
+    transition-duration: 0.25s ;
     display: inline-block;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-    margin-top: 1rem;
     
 }
 
@@ -385,9 +381,9 @@ legend {
 
 /* Button hover effect */
 .form-buttons:hover {
-    background-color: var(--hover-color);
-    color: var(--heading-color);
-    box-shadow: 0.5rem 0.5rem;
+    background-color: var(--hover-colour);
+    color: var(--hover-text-colour);
+    box-shadow: 0.5rem 0.5rem var(--hover-shadow-colour);
     cursor: pointer;
 }
 
