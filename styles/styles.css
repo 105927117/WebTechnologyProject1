@@ -70,6 +70,12 @@ header svg {
     width: min(100vw, 20rem);
     padding: 1rem;
     box-sizing: border-box;
+    transition-duration: 0.2s;
+}
+
+/* Styles for logo in header when in is hovered */
+header svg:hover {
+    color: var(--mid-colour);
 }
 
 /* Styles for header of the page */
