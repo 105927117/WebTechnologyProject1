@@ -86,6 +86,7 @@ footer {
     align-items: center;
     padding: 1rem;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 /* Styles for the email link inside the footer of the page */
@@ -268,8 +269,8 @@ strong {
     align-items: center;
 }
 
-/* Styles for the articles inside the detailed sections of the job descriptions page */
-#software-developer article, #web-page-designer article {
+/* Styles for  detailed sections of the job descriptions page */
+.detailed-description {
     flex: 1;
 }
 
