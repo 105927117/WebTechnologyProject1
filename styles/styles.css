@@ -69,6 +69,7 @@ header svg {
     color: var(--accent-color);
     width: min(100vw, 20rem);
     padding: 1rem;
+    box-sizing: border-box;
 }
 
 /* Styles for header of the page */
@@ -84,6 +85,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    gap: 1rem;
 }
 
 /* Styles for the email link inside the footer of the page */
@@ -156,8 +158,12 @@ aside {
     color: var(--header-text-colour);
     border-radius: 1rem;
     padding: 1rem;
-    width: max(20vw, 15rem);
-    margin: 1rem auto;
+    width: max(25%, 15rem);
+    float: right;
+    margin: 1rem;
+    border-color: var(--accent-color);
+    border-style: solid;
+    overflow: hidden;
 }
 
 /* Styles for headings inside aside elements */
@@ -168,6 +174,11 @@ aside h1, aside h2 {
 /* Styles for headings on any page */
 h1, h2 {
     color: var(--heading-colour);
+}
+
+/* Styles for top level headings on any page */
+h1 {
+    font: 3rem Arial, sans-serif;
 }
 
 /* Styles for class which is designed to center content inside */
@@ -210,6 +221,8 @@ h1, h2 {
     width: min(40rem, 80vw);
     text-align: center;
     margin: 1rem auto;
+    border-color: var(--accent-color);
+    border-style: solid;
 }
 
 /* Styles for headings inside description cards */
