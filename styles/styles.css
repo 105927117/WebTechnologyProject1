@@ -248,7 +248,8 @@ h1 {
     width: inherit;
     aspect-ratio: 2 / 1;
     object-fit: cover;
-    border-radius: 0px;/
+    border-radius: 0px;
+    border-style: none;
 }
 
 /* Styles for flexbox items to size based on the available space */
@@ -305,6 +306,8 @@ dd figure img{
 /* Styles for all images */
 img {
     border-radius: 1rem;
+    border-color: var(--accent-color);
+    border-style: solid;
 }
 /*-----------------------------------APPLY-------------------------------------------------------------------*/
 
