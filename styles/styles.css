@@ -84,7 +84,7 @@ nav svg{
 }
 
 /*makes hover colour of svg icons consistent with text of buttons on nav bar*/
-a:hover svg, header a svg:hover {
+nav a:hover svg, nav a svg:hover {
     color: var(--dark-colour);
 }
 
