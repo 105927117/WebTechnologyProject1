@@ -300,6 +300,11 @@ dd figure img{
     width: 20rem;
     height: 15rem;
 }
+
+/* Styles for all images */
+img {
+    border-radius: 1rem;
+}
 /*-----------------------------------APPLY-------------------------------------------------------------------*/
 
 /* Form styling */
