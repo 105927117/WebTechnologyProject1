@@ -22,3 +22,4 @@ This project was developed by:
 The following parts of this project have been created by generative AI:
 > Use of generative AI has also been noted with comments in relevant sections of the code.
 * All images on the job descriptions page (Excluding the logo).
+* Company description on job descriptions page.
