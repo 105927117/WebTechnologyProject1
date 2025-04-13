@@ -453,11 +453,15 @@ legend {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 2.0; /*the space between eack lines*/
     padding: 40px;
+
     max-width: 1200px; /*the size of the webpage*/
     margin: 0 auto;
     border-radius: 20px solid var(--accent-colour-2);
     box-shadow: 0 4px 8px var(--accent-colour-1);
 
+}
+#maincontent h1{
+    font-weight: bold;
 }
 
 
@@ -479,6 +483,7 @@ legend {
     font-size: 1.3em;
     font-weight: 500;
 }
+
 #sub_head h2 {
     color: var(--accent-colour-1);
 }
@@ -532,11 +537,22 @@ legend {
 
 }
 /*layout styling for the maincontent for home page*/
-#closure ul {
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
+
+
+/* Design for smaller screens */
+@media (max-width: 768px) {
+    #maincontent {
+        width: 90%;
+        padding: 2rem;
+    }
+    
+    #closure img.whychoosee{
+        width: 100%;
+        padding: 1rem;
+    }
+    #closure ul *li{
+        width: 100%;
+        padding: 20px;
+    }
 
 }
-
-
