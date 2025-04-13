@@ -281,7 +281,7 @@ strong {
 }
 
 /* Styles for specific links to make all the text fit on one line for smaller screens */
-aside a, .description-card a {
+aside a, .description-card a, dl a {
     width: auto;
 }
 
@@ -443,4 +443,126 @@ legend {
     #submit, #reset {
         width: 100%;
     }
+}
+/*---------------------------ABOUT--------------------------------*/
+
+/*styles ensure group details are on the right hand side*/
+#group-details{
+    display: flex;
+    float: right;
+}
+
+/*since student IDs are required to be on the right in this task, I just made all of the descriptions go on the right*/
+#details dd{
+    text-align: right;
+}
+
+/*this makes the group details section display like a seperate block, simmilar to the styling of the other pages*/
+#details{
+    background-color: var(--header-colour);
+    border-radius: 1rem;
+    border-color: var(--accent-color);
+    border-style: solid;
+    padding: 1rem;
+    color: var(--header-text-colour);
+}
+
+/*this makes the heading of the group details list, and the bold sections within the list stand out by using a different colour*/
+#details h3, #details li strong{
+    color: var(--contrast-heading-colour);
+}
+
+/*this removes the bullet points from unordered lists*/
+#details ul{
+    list-style: none;
+}
+
+/*this ensures that the member profiles stack vertically*/
+#member-profiles{
+    display: block;
+}
+
+/*these styles give the group photo a boarder, float it to the right, and help keep the sizing correct*/
+#group-photo{
+    border-radius: 1rem;
+    border-color: var(--accent-color);
+    border-style: solid;
+    width: 100%;
+    float: right;
+}
+
+/*these styles float the figure for the group photo to the right and make sure that it is correctly sized with the caption below in the center*/
+#group-photo-figure {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+/*these styles keep the tables aligned and sized correctly and give tables the standard background color*/
+table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--background-colour);
+    width: 90vw;
+}
+
+/*these styles keep the company details to the left of the page, and leave enough room for the group details on the right*/
+#company-details{
+    display: flex;
+    float: left;
+    width: 50%;
+}
+
+/*these styles give the important parts of the table such as the caption and items in the left column a distinct color to stand out*/
+table caption h3, td strong{
+    color: var(--heading-colour);
+}
+
+/*this changes the colour of table cells and text within table cells when hovered over, as specified by the project requirements*/
+td:hover, td:hover strong{
+    background-color: var(--hover-colour);
+    color: var(--text-color);
+}
+
+/*this prevents the hr element from being shrunken or displayed weirdly next to floating elements*/
+hr {
+    clear: both;
+}
+
+/*these styles give table cells and their content a smooth transition when being hovered over, and give table cells a rounded border*/
+td, td *{
+    border-radius: 0.2rem;
+    transition: 0.2s;
+}
+
+/*this stops the anchors to google maps in the table from being formatted like buttons on the nav bar*/
+td a{
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+/*this also stops the anchors to google maps in the table from being formatted like buttons on the nav bar, but now also for when they are hovered over*/
+td a:hover{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/*this helps the figures in the table wrap around when resizing for small screens*/
+td a figure{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*this keeps the figures in the table from becoming too large*/
+td a figure img{
+    width: 20vw;
+}
+
+/*this keeps the table cells at a consistant width*/
+td {
+    width: 40vw;
 }
