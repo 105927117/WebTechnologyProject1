@@ -22,3 +22,7 @@ This project was developed by:
 The following parts of this project have been created by generative AI:
 > Use of generative AI has also been noted with comments in relevant sections of the code.
 * All images on the job descriptions page (Excluding the logo).
+* all the contents in the home page were derived from AI .
+* pictures used in the home page were taken from google (excluding the logo).
+
+
