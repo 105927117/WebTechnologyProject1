@@ -248,6 +248,8 @@ h1 {
     width: inherit;
     aspect-ratio: 2 / 1;
     object-fit: cover;
+    border-radius: 0px;
+    border-style: none;
 }
 
 /* Styles for flexbox items to size based on the available space */
@@ -299,6 +301,13 @@ table{
 dd figure img{
     width: 20rem;
     height: 15rem;
+}
+
+/* Styles for all images */
+img {
+    border-radius: 1rem;
+    border-color: var(--accent-color);
+    border-style: solid;
 }
 /*-----------------------------------APPLY-------------------------------------------------------------------*/
 
@@ -443,6 +452,118 @@ legend {
     #submit, #reset {
         width: 100%;
     }
+}
+
+/*---------------------------------------<Home>------------------------------------------<Home>--------------------------------------------*/
+
+/*styling for the maincontent for home page*/
+
+#maincontent{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 2.0; /*the space between eack lines*/
+    padding: 40px;
+
+    max-width: 1200px; /*the size of the webpage*/
+    margin: 0 auto;
+    border-radius: 20px solid var(--accent-colour-2);
+    box-shadow: 0 4px 8px var(--accent-colour-1);
+
+}
+#maincontent h1{
+    font-weight: bold;
+}
+
+
+/*styling for the description for the home page*/
+#descriptionn{
+    font-size: 20px;
+    text-align: justify; 
+
+}
+
+/*styling for the maincontent for home page*/
+#sub_head {
+    background-color: var(--dark-colour);
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-colour-2);
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+#sub_head h2 {
+    color: var(--accent-colour-1);
+}
+
+#abt_company h2{
+    display: flex;   /*styling of layout for the about company section*/
+    justify-content: center;
+}
+
+#abt_company img.about-img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 15px;
+    border-radius: 8px;
+
+}
+/*removed all the list marking for the unordered list in the entire body of the webpage*/
+#maincontent ul{
+    list-style: none;
+}
+
+/*styling of font-size for the maincontent for home page*/
+#maincontent p, ul {
+    
+        margin-bottom: 20px;
+        font-size: 1em;
+      
+}
+/*styling for the join our team section in the home page*/
+#join_team {
+    background-color: var(--light-colour); 
+    padding: 20px; /*space between the border and text within the box*/
+    border-left: 5px solid var(--accent-colour-1); /*only added border in the left section*/
+    border-radius: 6px;
+    color: var(--dark-colour);
+    
+  }
+#join_team h2{
+    color: var(--accent-colour-2);
+}
+  
+/*styling for the why work with us content in the home page*/
+  #closure img.whychoosee {
+    
+    max-width: 150%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+
+}
+/*layout styling for the maincontent for home page*/
+
+
+/* Design for smaller screens */
+@media (max-width: 768px) {
+    #maincontent {
+        width: 90%;
+        padding: 2rem;
+    }
+    
+    #closure img.whychoosee{
+        width: 100%;
+        padding: 1rem;
+    }
+    #closure ul *li{
+        width: 100%;
+        padding: 20px;
+    }
+
 }
 /*---------------------------ABOUT--------------------------------*/
 
