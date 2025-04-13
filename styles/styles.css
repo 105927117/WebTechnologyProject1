@@ -248,6 +248,7 @@ h1 {
     width: inherit;
     aspect-ratio: 2 / 1;
     object-fit: cover;
+    border-radius: 0px;/
 }
 
 /* Styles for flexbox items to size based on the available space */
