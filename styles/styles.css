@@ -343,6 +343,22 @@ img {
     border-color: var(--accent-color);
     border-style: solid;
 }
+
+/* styles for the apply now button in the job descriptions page */
+.apply-now-button {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* styles for the svg inside the apply now button in the svg */
+.apply-now-button svg {
+    width: 1rem;
+    height: 1rem;
+}
 /*-----------------------------------APPLY-------------------------------------------------------------------*/
 
 /* Form styling */
