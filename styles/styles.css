@@ -679,7 +679,7 @@ table caption h3, td strong{
 /*this changes the colour of table cells and text within table cells when hovered over, as specified by the project requirements*/
 td:hover, td:hover strong{
     background-color: var(--hover-colour);
-    color: var(--text-color);
+    color: var(--light-colour);
 }
 
 /*this prevents the hr element from being shrunken or displayed weirdly next to floating elements*/
@@ -703,6 +703,7 @@ td a{
 td a:hover{
     background-color: transparent;
     box-shadow: none;
+    color: var(--light-colour);
 }
 
 /*this helps the figures in the table wrap around when resizing for small screens*/
