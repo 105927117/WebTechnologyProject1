@@ -512,13 +512,11 @@ legend {
 #maincontent{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 2.0; /*the space between eack lines*/
-    padding: 40px;
+    margin:  auto;
 
-    max-width: 1200px; /*the size of the webpage*/
-    margin: 0 auto;
-    box-shadow: 0 4px 8px var(--accent-colour-1);
 
 }
+
 #maincontent h1{
     font-weight: bold;
 }
@@ -601,13 +599,11 @@ legend {
 /* Design for smaller screens */
 @media (max-width: 768px) {
     #maincontent {
-        width: 90%;
-        padding: 2rem;
+        width: auto;
     }
     
     #closure img.whychoosee{
         width: 100%;
-        padding: 1rem;
     }
     #closure ul *li{
         width: 100%;
