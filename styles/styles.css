@@ -486,7 +486,8 @@ legend {
 @media (max-width: 768px) {
     form {
         width: 90%;
-        padding: 2rem;
+        padding: 0px;
+        margin: auto;
     }
     
     input, textarea, select {
