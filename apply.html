@@ -112,9 +112,9 @@
                 <h3 id="application-details-header">Applicant Details</h3>
                     <!--Names of applicant with 20 max alphabetical pattern with spaces allowed-->
                     <label class="required name" for="first-name">First Name:</label><!--Add asterick(*) for required-->
-                    <input class="name" type="text" name="first-name" id="first-name" pattern="[a-zA-Z\s]{1,20}" title="maximum 20 alphabetical characters limit" required>
+                    <input class="name" type="text" name="first-name" id="first-name" pattern="[a-zA-Z\s]{1,20}" title="maximum 20 alphabetical characters limit" placeholder="Ex: James">
                     <label class="required name" for="last-name">Last Name</label>
-                    <input class="name" type="text" name="last-name" id="last-name" pattern="[a-zA-Z\s]{1,20}" title="maximum 20 alphabetical characters limit" required>
+                    <input class="name" type="text" name="last-name" id="last-name" pattern="[a-zA-Z\s]{1,20}" title="maximum 20 alphabetical characters limit" placeholder="Ex: Bonds" required>
                     <br>
                     <!--Date of Birth that allow numerical inputs of slected input from calender-->
                     <label class="required" for="Date-of-Birth">Date of Birth:</label>
@@ -146,11 +146,11 @@
                     <!--Street address and suburb, required text input of alphabetical/numerical/spaces for 40 character max-->
                     <label class="required" for="Street-Address">Street Address:</label>
                     <br>
-                    <input type="text" name="Street-Address" id="Street-Address" pattern="[a-zA-Z0-9\s]{1,40}" title="maximum 40 alphabetical characters limit" required >
+                    <input type="text" name="Street-Address" id="Street-Address" pattern="[a-zA-Z0-9\s]{1,40}" title="maximum 40 alphabetical characters limit" placeholder="Ex: 13 John Street " required >
                     <br>
                     <label class="required" for="Suburb">Suburb:</label>
                     <br>
-                    <input type="text" name="Suburb" id="Suburb" pattern="[a-zA-Z\s]{1,40}" title="maximum 40 alphabetical characters limit" required >
+                    <input type="text" name="Suburb" id="Suburb" pattern="[a-zA-Z\s]{1,40}" title="maximum 40 alphabetical characters limit" placeholder="Ex: Hawthorn" >
                     <br>
                     <!--State dropdown selection-->
                     <label class="required" for="State">State:</label>
@@ -167,15 +167,15 @@
                     </select>
                     <!--Postcode, require numberical input of 4 digits-->
                     <label class="required" for="Postcode">Postcode:</label>
-                    <input type="text" name="Postcode" id="Postcode" pattern="\d{4}" required>
+                    <input type="text" name="Postcode" id="Postcode" pattern="\d{4}" placeholder="Ex: 3000" required>
                     <br>
                     <!--Email using pattern for required input-->
                     <label class="required" for="Email">Email:</label>
-                    <input type="text" name="Email" id="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                    <input type="text" name="Email" id="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Ex: you@example.com" required>
                     <br>
                     <!--Phone number, requied 8-12 digits input allowing spaces-->
                     <label class="required" for="Phone-number">Phone number:</label>
-                    <input type="tel" name="Phone-number" id="Phone-number" pattern="[\d\s]{8,12}" required>
+                    <input type="tel" name="Phone-number" id="Phone-number" pattern="[\d\s]{8,12}" placeholder="Ex: 0412 345 678" required>
             </section>
             <section id="job-application-details">
                 <!--Appling job details-->
