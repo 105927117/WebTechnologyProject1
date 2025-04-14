@@ -218,7 +218,7 @@ h1, h2 {
 
 /* Styles for top level headings on any page */
 h1 {
-    font: 3rem Arial, sans-serif;
+    font: 2.5rem Arial, sans-serif;
 }
 
 /* Styles for class which is designed to center content inside */
@@ -609,7 +609,7 @@ legend {
 /* Design for smaller screens */
 @media (max-width: 768px) {
     #maincontent {
-        width: auto;
+        width: 80vw;
     }
     
     #closure img.whychoosee{
