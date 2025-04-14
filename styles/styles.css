@@ -359,6 +359,16 @@ img {
     width: 1rem;
     height: 1rem;
 }
+
+#join_team {
+    background-image: url("images/OIP.jpg");
+}
+
+.join_team_content {
+    background-color: #ffffffdd;
+    padding: 1rem;
+    border-radius: 1rem;
+}
 /*-----------------------------------APPLY-------------------------------------------------------------------*/
 
 /* Form styling */
