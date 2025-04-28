@@ -1,21 +1,3 @@
-<!--THIS FILE IS NOT PART OF THE WEBSITE AND IS JUST MEANT TO BE USED AS A TEMPLATE FOR ALL THE PAGES-->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!--Meta tags for the page-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Alex Petrucci, Carl Petrucci, Kunvuth You, Mohamed Aarriz Mohamed Habeeb">
-    <meta name="keywords" content="clickmaxxing, web development, websites, programming"> <!--ADD EXTRA FOR YOUR PAGE-->
-    <meta name="description" content="CHANGE THIS FOR YOUR PAGE">
-    <!--Title of the page which shows on the tab-->
-    <title>ClickMaXXing | <!--PUT YOU PAGE NAME HERE--></title>
-    <!--Link to styles-->
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-    <!--Header of the page-->
     <header>
         <div class="center-wrapper">
             <a href="mailto:clickmaxxing@gmail.com">
@@ -55,9 +37,8 @@
         <!--Navigation links-->
         <nav>
             <ul>
-                <!--ADD 'class="current-page"' TO THE LINK FOR THE PAGE YOUR ARE CURRENTLY ON-->
                 <li>
-                    <a href="index.html">
+                    <a href="index.php" <?php echo ($page == "home") ? "class = 'current-page'" : ""; ?>>
                         <div class="nav-button">
                             <p>Home&nbsp;</p>
                             <!--SVG for button embeded in html so that the colour can be changed through css-->
@@ -68,7 +49,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="jobs.html">
+                    <a href="jobs.php" <?php echo ($page == "jobs") ? "class = 'current-page'" : ""; ?>>
                         <div class="nav-button">
                             <p>Jobs&nbsp;</p>
                             <!--SVG for button embeded in html so that the colour can be changed through css-->
@@ -81,7 +62,7 @@
                     </a>
                 </li>
                 <li>
-                        <a href="apply.html">
+                        <a href="apply.php" <?php echo ($page == "apply") ? "class = 'current-page'" : ""; ?>>
                             <div class="nav-button">
                                 <p>Apply&nbsp;</p>
                                 <!--SVG for button embeded in html so that the colour can be changed through css-->
@@ -92,7 +73,7 @@
                         </a>
                 </li>
                 <li>
-                    <a href="about.html">
+                    <a href="about.php" <?php echo ($page == "about") ? "class = 'current-page'" : ""; ?>>
                         <div class="nav-button">
                             <p>About&nbsp;</p>
                             <!--SVG for button embeded in html so that the colour can be changed through css-->
@@ -107,17 +88,3 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <!--PUT YOUR PAGE CONTENT HERE-->
-    </main>
-    <!--Footer of the page-->
-    <footer>
-        <p>&copy; ClickMaXXing 2025. All rights reserved.</p>
-        <p><em>Web solutions made easy.</em></p>
-        <div class="footer-links">
-            <p>Contact us: <a href="mailto:clickmaxxing@gmail.com">clickmaxxing@gmail.com</a></p>
-            <p>Jira: <a href="https://clickmaxxing.atlassian.net/jira/software/projects/SCRUM/boards/1">ClickMaXXing Jira</a></p>
-        </div>
-    </footer>
-</body>
-</html>
