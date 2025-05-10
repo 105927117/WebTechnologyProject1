@@ -36,6 +36,31 @@
                 </a>
             </div>
         </aside>
+
+        <?php
+            $host = "localhost";
+            $user = "root";
+            $pwd = "";
+            $sql_db = "clickmaxxing_db";
+
+            $conn = mysqli_connect($host, $user, $pwd, $sql_db);
+            if (!$conn) {
+                die("Connection failed: " . mysql_connect_error());
+            }
+
+            $sql = "SELECT * FROM jobs";
+            $result = mysqli_query($conn, $sql);
+            $jobs = [];
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $jobs[] = $row;
+                }
+            } else {
+                echo "Query failed.";
+            }
+
+            mysqli_close($conn);
+        ?>
         <h1>Job Descriptions</h1>
         <!--Section for giving users an overview of the company-->
         <section>
@@ -49,116 +74,79 @@
             <h2>Positions</h2>
             <!--Div below puts the cards in a flexbox so that they can adjust their positions for different screen sizes-->
             <div class="card-wrapper">
-                <!--Overview for software developer job-->
-                <article class="description-card">
-                    <h2>Software Developer</h2>
-                    <p>Reference No. CG7D5</p>
-                    <!--IMAGE BELOW IS AI GENERATED WITH COPILOT USING PROMPT: 'generate an image for the job description page for a software developer role'-->
-                    <img src="images/job_descriptions_software_dev.png" alt="Group of software developers in a meeting.">
-                    <p>Develop both the front-end and the backend for performant, user-friendly and functional websites.</p>
-                    <!--Link below redirects user to a more detailed job description-->
-                    <a href="#software-developer" title="click to find out more about this possition">More Info...</a>
-                </article>
-                <!--Overview for web page designer job-->
-                <article class="description-card">
-                    <h2>Web Page Designer</h2>
-                    <p>Reference No. Z5KFG</p>
-                    <!--IMAGE BELOW IS AI GENERATED WITH COPILOT USING PROMPT: 'generate an image for the job description page for a web page designer role'-->
-                    <img src="images/job_descriptions_web_designer.png" alt="A computer with an artistic web page design on it.">
-                    <p>Fine tune the aesthetics and user experience of websites.</p>
-                    <!--Link below redirects user to a more detailed job description-->
-                    <a href="#web-page-designer" title="click to find out more about this possition">More Info...</a>
-                </article>
+                <?php
+                    foreach ($jobs as $job) {
+                ?>
+                    <article class="description-card">
+                        <h2><?= $job["title"] ?></h2>
+                        <p>Reference No. <?= $job["reference_number"] ?></p>
+                        <img src="<?= $job["summary_image"] ?>" alt="<?= $job["summary_alt"] ?>">
+                        <p><?= $job["summary"] ?></p>
+                        <a href="#<?= str_replace(" ", "-", $job["title"]) ?>" title="click to find out more about this position">More Info...</a>
+                    </article>
+                <?php
+                    }
+                ?>
             </div>
         </section>
-        <hr>
-        <!--Detailed job description for software developer-->
-        <div id="software-developer">
-            <!--IMAGE BELOW IS AI GENERATED WITH COPILOT USING PROMPT: 'generate an image for the job description page for a software developer role'-->
-            <img src="images/job_descriptions_software_dev_2.png" alt="A group of software developers discussing code." class="description-img">
-            <section class="detailed-description">
-                <h2>Software Developer</h2>
-                <p>Reference No. CG7D5</p>
-                <ul>
-                    <li><strong>Description:</strong> As a software developer for ClickMaXXing, you will create websites for clients using React. This will involve both the front-end and the back-end of these websites.</li>
-                    <li><strong>Salary:</strong> $100K-$120K</li>
-                    <li><strong>Report to:</strong> Senior Software Engineer</li>
-                    <li>
-                        <strong>Key Responsibilities:</strong>
-                        <ol>
-                            <li>Create back-ends for websites.</li>
-                            <li>Create front-ends for websites.</li>
-                            <li>Enforce use of semantic HTML tags.</li>
-                            <li>Ensure accessablity.</li>
-                        </ol>
-                    </li>
-                    <li>
-                        <strong>Qualifications, Skills, Knowledge and Attributes:</strong>
-                        <dl>
-                            <dt><strong>Essential</strong></dt>
-                            <dd>
-                                <ol>
-                                    <li>4+ Years of web development experience.</li>
-                                    <li>Ability to use Git/Github and collaborate with others.</li>
-                                    <li>Bachelors Degree of Computer Science or any equivalent qualification.</li>
-                                </ol>
-                            </dd>
-                            <dt><strong>Preferred</strong></dt>
-                            <dd>
-                                <ol>
-                                    <li>Portfolio of personal web projects.</li>
-                                    <li>Communication skills.</li>
-                                    <li>Experience with React.</li>
-                                </ol>
-                            </dd>
-                        </dl>
-                    </li>
-                </ul>
-            </section>
-        </div>
-        <hr>
-        <!--Detailed job description for web page designer-->
-        <div id="web-page-designer">
-            <!--IMAGE BELOW IS AI GENERATED WITH COPILOT USING PROMPT: 'generate an image for the job description page for a software developer role'-->
-            <img src="images/job_descriptions_web_designer_2.png" alt="Designers collaborating to make a website." class="description-img">
-            <section class="detailed-description">
-                <h2>Web Page Designer</h2>
-                <p>Reference No. Z5KFG</p>
-                <ul>
-                    <li><strong>Description:</strong> As a web page designer, you will collaborate with other designers to to develop aesthetically pleasing, functional, and user-friendly designs.</li>
-                    <li><strong>Salary:</strong> $80K-$100K</li>
-                    <li><strong>Report to:</strong> Lead Designer</li>
-                    <li>
-                        <strong>Key Responsibilities:</strong>
-                        <ol>
-                            <li>Design attractive websites.</li>
-                            <li>Communicate with other designers.</li>
-                            <li>Communicate with developers to implement your designs.</li>
-                        </ol>
-                    </li>
-                    <li>
-                        <strong>Qualifications, Skills, Knowledge and Attributes:</strong>
-                        <dl>
-                            <dt><strong>Essential</strong></dt>
-                            <dd>
-                                <ol>
-                                    <li>2+ Years of website design experience.</li>
-                                    <li>Experience in client communication.</li>
-                                    <li>Bachelors Degree of Design or any equivalent qualification.</li>
-                                </ol>
-                            </dd>
-                            <dt><strong>Preferred</strong></dt>
-                            <dd>
-                                <ol>
-                                    <li>Portfolio of personal user interface designs.</li>
-                                    <li>Creativity.</li>
-                                </ol>
-                            </dd>
-                        </dl>
-                    </li>
-                </ul>
-            </section>
-        </div>
+        <?php
+            foreach ($jobs as $job) {
+        ?>
+            <hr>
+            <div id="<?= str_replace(" ", "-", $job["title"]) ?>" class="long-description">
+                <img src="<?= $job["description_image"] ?>" alt="<?= $job["description_alt"] ?>" class="description-img">
+                <section class="detailed-description">
+                    <h2><?= $job["title"] ?></h2>
+                    <p>Reference No. <?= $job["reference_number"] ?></p>
+                    <ul>
+                        <li><strong>Description:</strong> <?= $job["description"] ?></li>
+                        <li><strong>Salary:</strong> <?php
+                            $min = ($job["salary_min"] / 1000);
+                            $max = ($job["salary_max"] / 1000);
+                            echo "\${$min}K-\${$max}K";
+                        ?></li>
+                        <li><strong>Report to:</strong> <?= $job["report_to"] ?></li>
+                        <li>
+                            <strong>Key Responsibilities:</strong>
+                            <ol>
+                                <?php
+                                    foreach (explode("\n", $job["responsibilities"]) as $item) {
+                                        echo "<li>$item</li>";
+                                    }
+                                ?>
+                            </ol>
+                        </li>
+                        <li>
+                            <strong>Qualifications, Skills, Knowledge and Attributes:</strong>
+                            <dl>
+                                <dt><strong>Essential</strong></dt>
+                                <dd>
+                                    <ol>
+                                        <?php
+                                            foreach (explode("\n", $job["essential_qualifications"]) as $item) {
+                                                echo "<li>$item</li>";
+                                            }
+                                        ?>
+                                    </ol>
+                                </dd>
+                                <dt><strong>Preferred</strong></dt>
+                                <dd>
+                                    <ol>
+                                        <?php
+                                            foreach (explode("\n", $job["preferred_qualifications"]) as $item) {
+                                                echo "<li>$item</li>";
+                                            }
+                                        ?>
+                                    </ol>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        <?php
+            }
+        ?>
     </main>
     <!--Footer of the page-->
     <?php include_once("footer.inc");?>
