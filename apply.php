@@ -20,6 +20,30 @@
     ?>
 
     <main>
+        <?php
+            $host = "localhost";
+            $user = "root";
+            $pwd = "";
+            $sql_db = "clickmaxxing_db";
+
+            $conn = mysqli_connect($host, $user, $pwd, $sql_db);
+            if (!$conn) {
+                die("Connection failed: " . mysql_connect_error());
+            }
+
+            $sql = "SELECT * FROM jobs";
+            $result = mysqli_query($conn, $sql);
+            $jobs = [];
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $jobs[] = $row;
+                }
+            } else {
+                echo "Query failed.";
+            }
+
+            mysqli_close($conn);
+        ?>
         <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
 
             <section id="application-details">
@@ -98,21 +122,25 @@
                     <label class="required" for="Job-reference-number">Job reference number</label>
                     <select name="Job-reference-number" id="Job-reference-number" required>
                         <option value="">Please select</option>
-                        <option value="SOF-DEV-CG7D5">SOF-DEV-CG7D5</option>
-                        <option value="WEB-DEV-Z5KFG">WEB-DEV-Z5KFG</option>
+                        <?php
+                            foreach ($jobs as $job) {
+                                echo "<option value='{$job["reference_number"]}'>{$job["title"]}: {$job["reference_number"]}</option>";
+                            }
+                        ?>
                     </select>
                     <br>
                     <label class="required" >Required technical list:</label>
-                    <div class="selection-label">
-                        
-                        <input class="selection-box" type="checkbox" name="software-developer" id="software-developer" value="software-developer" checked>
-                        <label for="software-developer">Software Developer</label>
-                        
-                    </div>
-                    <div class="selection-label">
-                        <input class="selection-box" type="checkbox" name="web-developer" id="web-developer" value="web-developer">
-                        <label for="web-developer">Web Developer</label>
-                    </div>
+                    <?php
+                        foreach ($jobs as $job) {
+                            $title = strtolower(str_replace(" ", "-", $job["title"]));
+                    ?>
+                        <div class="selection-label">
+                            <input class="selection-box" type="checkbox" name="<?= $title ?>" id="<?= $title ?>" value="<?= $title ?>">
+                            <label for="<?= $title ?>"><?= $job["title"] ?></label>
+                        </div>
+                    <?php
+                        }
+                    ?>
                     
                     <label for="Other-skills">Other Skills:</label>
                     <br>
