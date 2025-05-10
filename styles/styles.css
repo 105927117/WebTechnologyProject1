@@ -302,7 +302,7 @@ strong {
 }
 
 /* Styles for the detailed description sections found on the job descriptions page */
-#software-developer, #web-page-designer {
+.long-description {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row-reverse;
