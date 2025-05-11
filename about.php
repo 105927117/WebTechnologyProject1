@@ -86,7 +86,7 @@
                                         </dl>
                                         <dl>
                                             <dt><strong>Contribution:</strong></dt>
-                                            <dd>jobs.html, template.html, styles.css</dd>
+                                            <dd>jobs.php, header.php, footer.php, styles.css, jobs description table, clickmaxxing_db.sql</dd>
                                         </dl>
                                     </dd>
                                 </dl>
@@ -101,7 +101,7 @@
                                         </dl>
                                         <dl>
                                             <dt><strong>Contribution:</strong></dt>
-                                            <dd>index.html, template.html, styles.css</dd>
+                                            <dd>index.php, header.php, footer.php, styles.css, manage.php, clickmaxxing_db.sql</dd>
                                         </dl>
                                     </dd>
                                 </dl>
@@ -116,7 +116,7 @@
                                         </dl>
                                         <dl>
                                             <dt><strong>Contribution:</strong></dt>
-                                            <dd>about.html, template.html, styles.css</dd>
+                                            <dd>about.php, header.php, footer.php, styles.css, settings.php, include files, enhancments.php</dd>
                                         </dl>
                                     </dd>
                                 </dl>
@@ -131,7 +131,7 @@
                                         </dl>
                                         <dl>
                                             <dt><strong>Contribution:</strong></dt>
-                                            <dd>apply.html, template.html, styles.css</dd>
+                                            <dd>apply.php, header.php, footer.php, styles.css, EOI table, proccess_eoi.php, clickmaxxing_db.sql</dd>
                                         </dl>
                                     </dd>
                                 </dl>
