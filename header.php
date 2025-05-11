@@ -1,3 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Meta tags for the page-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alex Petrucci, Carl Petrucci, Kunvuth You, Mohamed Aarriz Mohamed Habeeb">
+    <meta name="keywords" content=<?php
+    if ($page == "home"){
+        echo("'ClickMaXXing, COS10026, webpage, website, web development, IT, web solutions, home, company info'");
+    }
+    if ($page == "jobs"){
+        echo("'ClickMaXXing, COS10026, webpage, website, web development, IT, web solutions, jobs, software developer, web page designer, vaccancies, possitions, salary, requirements'");
+    }
+    if ($page == "apply"){
+        echo("'ClickMaXXing, COS10026, webpage, website, web development, IT, web solutions, apply, form, contact details, skills, roles, jobs'");
+    }
+    if ($page == "about"){
+        echo("'ClickMaXXing, COS10026, webpage, website, web development, IT, web solutions, about, Alex Petrucci, Mohamed Aarriz Mohamed Habeeb, Kunvuth You, Carl Petrucci, Swinburne, students, team, computer science'");
+    }
+    ?>> <!--ADD EXTRA FOR YOUR PAGE-->
+    <meta name="description" content=<?php
+    if ($page == "home"){
+        echo("'ClickMaXXing is an organisation which specialises in empowering your business with high quality web solutions. From our home page, learn more about our organisation, or flick to the other pages to see how you could be a part of this organisation's future!'");
+    }
+    if ($page == "jobs"){
+        echo("'ClickMaXXing is an organisation which specialises in empowering your business with high quality web solutions. We are constantly looking for new talent, and offering competitive salaries to attract the highsest quality staff across all IT disciplines. See which roles are currently vaccant now!'");
+    }
+    if ($page == "apply"){
+        echo("'ClickMaXXing is an organisation which specialises in empowering your business with high quality web solutions. Have you seen any of our amazing roles with competitive salaries and benefits? Now is your chance to apply! Fill out this quick form, and if you have what it takes to work with us, we will be in contact with you shortly!'");
+    }
+    if ($page == "about"){
+        echo("'ClickMaXXing is an organisation which specialises in empowering your business with high quality web solutions. Learn more about the dedicated team here at ClickMaXXing! This website was created by a team of enthusiastic computer science students at Swinburne University of Technology, and is a showcase of the web development skills they have gained in their first semester!'");
+    }
+    ?>>
+    <!--Title of the page which shows on the tab-->
+    <title>ClickMaXXing | <!--PUT YOU PAGE NAME HERE--></title>
+    <!--Link to styles-->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
     <header>
         <div class="center-wrapper">
             <a href="mailto:clickmaxxing@gmail.com">

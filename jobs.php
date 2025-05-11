@@ -148,7 +148,5 @@
             }
         ?>
     </main>
-    <!--Footer of the page-->
-    <?php include_once("footer.php");?>
-</body>
-</html>
+<!--Footer of the page-->
+<?php include_once("footer.php");?>
