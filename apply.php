@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!--Meta tags for the page-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Alex Petrucci, Carl Petrucci, Kunvuth You, Mohamed Aarriz Mohamed Habeeb">
-    <meta name="keywords" content="clickmaxxing, web development, websites, programming, jobs, job applications, programming jobs">
-    <meta name="description" content="Apply for available jobs at ClickMaXXing">
-    <!--Title of the page which shows on the tab-->
-    <title>ClickMaXXing | Apply</title>
-    <!--Link to styles-->
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-    <!--Header of the page-->
-    <?php
-    $page = "apply";
-    include_once("header.php");
-    ?>
+<!--Header of the page-->
+<?php
+$page = "apply";
+include_once("header.php");
+?>
 
     <main>
         <?php
@@ -154,7 +139,5 @@
             <input type="reset" value="Reset" id="reset" class="form-buttons" title="click to clear form">
         </form> 
     </main>
-    <!--Footer of the page-->
-    <?php include_once("footer.php");?>
-</body>
-</html>
+<!--Footer of the page-->
+<?php include_once("footer.php");?>

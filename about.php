@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ClickMaXXing is an IT company dedicated to enhancing websites. Learn more about the team behind this website.">
-    <meta name="keywords" content="ClickMaXXing, Alex Petrucci, Mohamed Aarriz Mohamed Habeeb, Carl Petrucci, Kunvuth You, websites, COS10026">
-    <meta name="author" content="Alex Petrucci, Mohamed Aarriz Mohamed Habeeb, Carl Petrucci, Kunvuth You">
-    <title>ClickMaXXing | About</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-
-<body>
-    <!--header of the page-->
-    <?php
-    $page = "about";
-    include_once("header.php");
-    ?>
-
-<!--I decided to swap around which section is encased in a table and which is put into lists since the group member profiles take up more space, and putting them in lists allows for them to be repossitioned more easily-->
+ <!--header of the page-->
+<?php
+$page = "about";
+include_once("header.php");
+?>
     <main>
 
         <section id="company-details">
@@ -351,6 +336,5 @@
         </figure>
     </main>
 
-    <!--Footer of the page-->
-    <?php include_once("footer.php");?>
-</body>
+<!--Footer of the page-->
+ <?php include_once("footer.php");?>

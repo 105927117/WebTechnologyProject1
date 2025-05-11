@@ -6,3 +6,5 @@
             <p>Jira: <a href="https://clickmaxxing.atlassian.net/jira/software/projects/SCRUM/boards/1">ClickMaXXing Jira</a></p>
         </div>
     </footer>
+</body>
+</html>
