@@ -16,7 +16,7 @@
     <!--Header of the page-->
     <?php
     $page = "home";
-    include_once("header.inc");
+    include_once("header.php");
     ?>
     <main id="maincontent" >
 
@@ -108,6 +108,6 @@
 
     </main>             
     <!--Footer of the page-->
-    <?php include_once("footer.inc");?>
+    <?php include_once("footer.php");?>
 </body>
 </html>

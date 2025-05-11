@@ -16,7 +16,7 @@
     <!--Header of the page-->
     <?php
     $page = "jobs";
-    include_once("header.inc");
+    include_once("header.php");
     ?>
 
     <!--Main content of the page-->
@@ -149,6 +149,6 @@
         ?>
     </main>
     <!--Footer of the page-->
-    <?php include_once("footer.inc");?>
+    <?php include_once("footer.php");?>
 </body>
 </html>

@@ -18,12 +18,12 @@
     <!--Header of the page-->
     <?php
     $page = "PUT YOUR PAGE NAME HERE!!!!!!";
-    include_once("header.inc");
+    include_once("header.php");
     ?>
     <main>
         <!--PUT YOUR PAGE CONTENT HERE-->
     </main>
     <!--Footer of the page-->
-    <?php include_once("footer.inc");?>
+    <?php include_once("footer.php");?>
 </body>
 </html>

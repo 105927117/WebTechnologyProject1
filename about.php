@@ -14,7 +14,7 @@
     <!--header of the page-->
     <?php
     $page = "about";
-    include_once("header.inc");
+    include_once("header.php");
     ?>
 
 <!--I decided to swap around which section is encased in a table and which is put into lists since the group member profiles take up more space, and putting them in lists allows for them to be repossitioned more easily-->
@@ -352,5 +352,5 @@
     </main>
 
     <!--Footer of the page-->
-    <?php include_once("footer.inc");?>
+    <?php include_once("footer.php");?>
 </body>
