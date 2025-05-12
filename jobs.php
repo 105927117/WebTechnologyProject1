@@ -2,6 +2,21 @@
 <?php
 $page = "jobs";
 include_once("header.php");
+
+include_once("settings.php");
+
+$sql = "SELECT * FROM jobs";
+$result = mysqli_query($conn, $sql);
+$jobs = [];
+if ($result) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $jobs[] = $row;
+    }
+} else {
+    echo "Query failed.";
+}
+
+mysqli_close($conn);
 ?>
 
 <!--Main content of the page-->
@@ -21,34 +36,6 @@ include_once("header.php");
             </a>
         </div>
     </aside>
-            $conn = mysqli_connect($host, $user, $pwd, $sql_db);
-            if (!$conn) {
-                die("Connection failed: " . mysqli_connect_error());
-            }
-    <?php
-        $host = "localhost";
-        $user = "root";
-        $pwd = "";
-        $sql_db = "clickmaxxing_db";
-
-        $conn = mysqli_connect($host, $user, $pwd, $sql_db);
-        if (!$conn) {
-            die("Connection failed: " . mysql_connect_error());
-        }
-
-        $sql = "SELECT * FROM jobs";
-        $result = mysqli_query($conn, $sql);
-        $jobs = [];
-        if ($result) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                $jobs[] = $row;
-            }
-        } else {
-            echo "Query failed.";
-        }
-
-        mysqli_close($conn);
-    ?>
     <h1>Job Descriptions</h1>
     <!--Section for giving users an overview of the company-->
     <section>
