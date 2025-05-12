@@ -99,25 +99,24 @@ mysqli_close($conn);
                 <select name="Job-reference-number" id="Job-reference-number" required>
                     <option value="">Please select</option>
                     <?php
-                        foreach ($jobs as $job) {
-                            echo "<option value='{$job["reference_number"]}'>{$job["title"]}: {$job["reference_number"]}</option>";
-                        }
+                    foreach ($jobs as $job) {
+                        echo "<option value='{$job["reference_number"]}'>{$job["title"]}: {$job["reference_number"]}</option>";
+                    }
                     ?>
                 </select>
                 <br>
                 <label class="required" >Required technical list:</label>
                 <?php
-                    foreach ($jobs as $job) {
-                        $title = strtolower(str_replace(" ", "-", $job["title"]));
+                foreach ($jobs as $job) {
+                    $title = strtolower(str_replace(" ", "-", $job["title"]));
                 ?>
-                    <div class="selection-label">
-                        <input class="selection-box" type="checkbox" name="<?= $title ?>" id="<?= $title ?>" value="<?= $title ?>">
-                        <label for="<?= $title ?>"><?= $job["title"] ?></label>
-                    </div>
+                <div class="selection-label">
+                    <input class="selection-box" type="checkbox" name="<?= $title ?>" id="<?= $title ?>" value="<?= $title ?>">
+                    <label for="<?= $title ?>"><?= $job["title"] ?></label>
+                </div>
                 <?php
-                    }
+                }
                 ?>
-                
                 <label for="Other-skills">Other Skills:</label>
                 <br>
                 <textarea name="Other-skills" id="Other-skills" placeholder="Write down your other skills here...." rows="6" cols="25"></textarea>
