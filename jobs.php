@@ -21,7 +21,10 @@ include_once("header.php");
             </a>
         </div>
     </aside>
-
+            $conn = mysqli_connect($host, $user, $pwd, $sql_db);
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
     <?php
         $host = "localhost";
         $user = "root";
