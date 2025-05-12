@@ -50,77 +50,77 @@ mysqli_close($conn);
         <!--Div below puts the cards in a flexbox so that they can adjust their positions for different screen sizes-->
         <div class="card-wrapper">
             <?php
-                foreach ($jobs as $job) {
+            foreach ($jobs as $job) {
             ?>
-                <article class="description-card">
-                    <h2><?= $job["title"] ?></h2>
-                    <p>Reference No. <?= $job["reference_number"] ?></p>
-                    <img src="<?= $job["summary_image"] ?>" alt="<?= $job["summary_alt"] ?>">
-                    <p><?= $job["summary"] ?></p>
-                    <a href="#<?= str_replace(" ", "-", $job["title"]) ?>" title="click to find out more about this position">More Info...</a>
-                </article>
+            <article class="description-card">
+                <h2><?= $job["title"] ?></h2>
+                <p>Reference No. <?= $job["reference_number"] ?></p>
+                <img src="<?= $job["summary_image"] ?>" alt="<?= $job["summary_alt"] ?>">
+                <p><?= $job["summary"] ?></p>
+                <a href="#<?= str_replace(" ", "-", $job["title"]) ?>" title="click to find out more about this position">More Info...</a>
+            </article>
             <?php
-                }
+            }
             ?>
         </div>
     </section>
     <?php
-        foreach ($jobs as $job) {
+    foreach ($jobs as $job) {
     ?>
-        <hr>
-        <div id="<?= str_replace(" ", "-", $job["title"]) ?>" class="long-description">
-            <img src="<?= $job["description_image"] ?>" alt="<?= $job["description_alt"] ?>" class="description-img">
-            <section class="detailed-description">
-                <h2><?= $job["title"] ?></h2>
-                <p>Reference No. <?= $job["reference_number"] ?></p>
-                <ul>
-                    <li><strong>Description:</strong> <?= $job["description"] ?></li>
-                    <li><strong>Salary:</strong> <?php
-                        $min = ($job["salary_min"] / 1000);
-                        $max = ($job["salary_max"] / 1000);
-                        echo "\${$min}K-\${$max}K";
-                    ?></li>
-                    <li><strong>Report to:</strong> <?= $job["report_to"] ?></li>
-                    <li>
-                        <strong>Key Responsibilities:</strong>
-                        <ol>
-                            <?php
-                                foreach (explode("\n", $job["responsibilities"]) as $item) {
+    <hr>
+    <div id="<?= str_replace(" ", "-", $job["title"]) ?>" class="long-description">
+        <img src="<?= $job["description_image"] ?>" alt="<?= $job["description_alt"] ?>" class="description-img">
+        <section class="detailed-description">
+            <h2><?= $job["title"] ?></h2>
+            <p>Reference No. <?= $job["reference_number"] ?></p>
+            <ul>
+                <li><strong>Description:</strong> <?= $job["description"] ?></li>
+                <li><strong>Salary:</strong> <?php
+                    $min = ($job["salary_min"] / 1000);
+                    $max = ($job["salary_max"] / 1000);
+                    echo "\${$min}K-\${$max}K";
+                ?></li>
+                <li><strong>Report to:</strong> <?= $job["report_to"] ?></li>
+                <li>
+                    <strong>Key Responsibilities:</strong>
+                    <ol>
+                        <?php
+                        foreach (explode("\n", $job["responsibilities"]) as $item) {
+                            echo "<li>$item</li>";
+                        }
+                        ?>
+                    </ol>
+                </li>
+                <li>
+                    <strong>Qualifications, Skills, Knowledge and Attributes:</strong>
+                    <dl>
+                        <dt><strong>Essential</strong></dt>
+                        <dd>
+                            <ol>
+                                <?php
+                                foreach (explode("\n", $job["essential_qualifications"]) as $item) {
                                     echo "<li>$item</li>";
                                 }
-                            ?>
-                        </ol>
-                    </li>
-                    <li>
-                        <strong>Qualifications, Skills, Knowledge and Attributes:</strong>
-                        <dl>
-                            <dt><strong>Essential</strong></dt>
-                            <dd>
-                                <ol>
-                                    <?php
-                                        foreach (explode("\n", $job["essential_qualifications"]) as $item) {
-                                            echo "<li>$item</li>";
-                                        }
-                                    ?>
-                                </ol>
-                            </dd>
-                            <dt><strong>Preferred</strong></dt>
-                            <dd>
-                                <ol>
-                                    <?php
-                                        foreach (explode("\n", $job["preferred_qualifications"]) as $item) {
-                                            echo "<li>$item</li>";
-                                        }
-                                    ?>
-                                </ol>
-                            </dd>
-                        </dl>
-                    </li>
-                </ul>
-            </section>
-        </div>
+                                ?>
+                            </ol>
+                        </dd>
+                        <dt><strong>Preferred</strong></dt>
+                        <dd>
+                            <ol>
+                                <?php
+                                foreach (explode("\n", $job["preferred_qualifications"]) as $item) {
+                                    echo "<li>$item</li>";
+                                }
+                                ?>
+                            </ol>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </section>
+    </div>
     <?php
-        }
+    }
     ?>
 </main>
 <!--Footer of the page-->
