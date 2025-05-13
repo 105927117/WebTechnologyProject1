@@ -49,9 +49,7 @@ mysqli_close($conn);
         <h2>Positions</h2>
         <!--Div below puts the cards in a flexbox so that they can adjust their positions for different screen sizes-->
         <div class="card-wrapper">
-            <?php
-            foreach ($jobs as $job) {
-            ?>
+            <?php foreach ($jobs as $job): ?>
             <article class="description-card">
                 <h2><?= $job["title"] ?></h2>
                 <p>Reference No. <?= $job["reference_number"] ?></p>
@@ -59,14 +57,10 @@ mysqli_close($conn);
                 <p><?= $job["summary"] ?></p>
                 <a href="#<?= str_replace(" ", "-", $job["title"]) ?>" title="click to find out more about this position">More Info...</a>
             </article>
-            <?php
-            }
-            ?>
+            <?php endforeach ?>
         </div>
     </section>
-    <?php
-    foreach ($jobs as $job) {
-    ?>
+    <?php foreach ($jobs as $job): ?>
     <hr>
     <div id="<?= str_replace(" ", "-", $job["title"]) ?>" class="long-description">
         <img src="<?= $job["description_image"] ?>" alt="<?= $job["description_alt"] ?>" class="description-img">
@@ -119,9 +113,7 @@ mysqli_close($conn);
             </ul>
         </section>
     </div>
-    <?php
-    }
-    ?>
+    <?php endforeach ?>
 </main>
 <!--Footer of the page-->
 <?php include_once("footer.php");?>
