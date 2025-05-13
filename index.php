@@ -71,7 +71,7 @@ include_once("header.php");
                 </li>
                         </ol>
                         <p>For more details click the below link</p>
-                        <a href="jobs.html" title="click to see current vacancies">More Details</a>             <!--used anchor tags for providing direct access to the jobs page for more details -->
+                        <a href="jobs.php" title="click to see current vacancies">More Details</a>             <!--used anchor tags for providing direct access to the jobs page for more details -->
             </div>
 
         </section>
