@@ -2,6 +2,21 @@
 <?php
 $page = "home";
 include_once("header.php");
+
+include_once("settings.php");
+
+$sql = "SELECT * FROM jobs";
+$result = mysqli_query($conn, $sql);
+$jobs = [];
+if ($result) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $jobs[] = $row;
+    }
+} else {
+    echo "Query failed.";
+}
+
+mysqli_close($conn);
 ?>
     <main id="maincontent" >
 
@@ -50,26 +65,26 @@ include_once("header.php");
                     If you are passionate about technology and innovation, check out our latest job openings below.</p>
                         
                 
-                        <h2> Current Job Openings </h2>
-                         <!--content from Gen AI-->
-                        <ol>
-                <li>
-                    <p>Software Openings</p>
-                        <ul>                                                         <!--created unordered lists tags to create a list-->
-                            <li>Overview: Develop both the front-end and the backend for performant, user-friendly and functional websites.</li>
-                            <li>Experience: 4+ Years of web development experience.</li>                              <!--used list tag to enlist items within the lists-->
-                            <li>Skills Required: Ability to use Git/Github and collaborate with others.</li>
-                        </ul>
-                </li>
-                <li>
-                    <p>Web Page Designing Openings</p>
-                        <ul>
-                            <li>Overview: Fine tune the aesthetics and user experience of websites.</li>
-                            <li>Experience: 2+ Years of website design experience.</li>
-                            <li>Skills Required: Experience in client communication.</li>  <!--used list tag to enlist items within the lists-->
-                        </ul>
-                </li>
-                        </ol>
+                <h2> Current Job Openings </h2>
+                    <!--content from Gen AI-->
+                <ol>
+                    <?php foreach($jobs as $job): ?>
+                        <li>
+                            <p><?= $job["title"] ?></p>
+                            <ul>
+                                <li>Overview: <?= $job["summary"] ?></li>
+                                <li>
+                                    Requirements:
+                                    <ul>
+                                        <?php foreach(explode("\n", $job["essential_qualifications"]) as $requirement): ?>
+                                        <li><?= $requirement ?></li>
+                                        <?php endforeach ?>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    <?php endforeach ?>
+                </ol>
                         <p>For more details click the below link</p>
                         <a href="jobs.php" title="click to see current vacancies">More Details</a>             <!--used anchor tags for providing direct access to the jobs page for more details -->
             </div>
