@@ -27,7 +27,7 @@ mysqli_close($conn);
         <p>We are hiring! To apply for one of our available jobs, just head over to our job applications page by clicking the 'Apply' link in the navagation bar at the top of the website, or the link below.</p>
         <!--Div below centers the link within it-->
         <div class="center-wrapper">
-            <a href="apply.html" class="apply-now-button" title="click to apply for a position">
+            <a href="apply.php" class="apply-now-button" title="click to apply for a position">
                 <p>Apply Now&nbsp;</p>
                 <!--SVG for button embeded in html so that the colour can be changed through css-->
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91.94 113.74">
