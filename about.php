@@ -5,127 +5,127 @@ include_once("header.php");
 ?>
     <main>
 
-        <section id="company-details">
-            <div>
-                <h1>About us</h1>
-                <h2>Discover what is right for you</h2>
-                <p><strong>Welcome to ClickMaXXing</strong></p>
-                <!--content from GeN AI-->
-                <div id="aboutcontent">
-                    <p><em>ClickMaXXing, we are committed to driving innovation and delivering high-quality IT services to businesses worldwide.
-                    Our team of skilled professionals specializes in software development, cybersecurity, cloud computing, AI, and IT consulting.
-                    We believe in fostering a dynamic and inclusive work environment that encourages creativity and career growth.</em></p>
+        <div id="top-of-about-page">
+            <section id="company-details">
+                <div>
+                    <h1>About us</h1>
+                    <h2>Discover what is right for you</h2>
+                    <p><strong>Welcome to ClickMaXXing</strong></p>
+                    <!--content from GeN AI-->
+                    <div id="aboutcontent">
+                        <p><em>ClickMaXXing, we are committed to driving innovation and delivering high-quality IT services to businesses worldwide.
+                        Our team of skilled professionals specializes in software development, cybersecurity, cloud computing, AI, and IT consulting.
+                        We believe in fostering a dynamic and inclusive work environment that encourages creativity and career growth.</em></p>
+                    </div>
+                        <!-- Subheading -->
+            
+                    <h2><Strong>About ClickMaXXing</Strong></h2>
+                    <p>Australia's one of the newest and largest IT network, providing solutions to more than 100 countries around the world.</p>
+                        <!-- Subheading -->
+                    <h2><strong>Our Services</strong></h2>
+                    <!--content from Gen AI-->
+                    <ul>
+                        <li>✔ Software Development - Custom web and mobile applications tailored to business needs.</li>
+                        <li>✔ Cybersecurity Solutions - Advanced security measures to protect businesses from cyber threats.</li>
+                        <li>✔ Cloud Computing - Scalable cloud solutions for storage and infrastructure.</li>
+                        <li>✔ AI & Machine Learning - Intelligent automation and predictive analytics.</li>
+                        <li>✔ IT Consulting - Expert guidance to optimize technology strategies.</li>
+                    </ul>
                 </div>
-                    <!-- Subheading -->
-                
-                <h2><Strong>About ClickMaXXing</Strong></h2>
-                <p>Australia's one of the newest and largest IT network, providing solutions to more than 100 countries around the world.</p>
-                    <!-- Subheading -->
-                <h2><strong>Our Services</strong></h2>
-                <!--content from Gen AI-->
-
-                <ul>
-                    <li>✔ Software Development - Custom web and mobile applications tailored to business needs.</li>
-                    <li>✔ Cybersecurity Solutions - Advanced security measures to protect businesses from cyber threats.</li>
-                    <li>✔ Cloud Computing - Scalable cloud solutions for storage and infrastructure.</li>
-                    <li>✔ AI & Machine Learning - Intelligent automation and predictive analytics.</li>
-                    <li>✔ IT Consulting - Expert guidance to optimize technology strategies.</li>
-                </ul>
-
-            </div>
-        </section>
-        <!--This section contains basic information for identifying group members in an unordered list-->
-        
-        <section id="group-details">
-            <div id="details">
-                <h3>Group details:</h3>
-                <ul>
-                    <li>
-                        <dl>
-                            <dt><strong>Group name:</strong></dt>
-                            <dd>ClickMaXXing</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><strong>Class time:</strong></dt>
-                            <dd>Monday from 2:30pm to 4:30pm</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><strong>Tutor:</strong></dt>
-                            <dd>Mr. Enrique Nicolas Ketterer Ortiz (Nick)</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <strong>Members</strong>
-                        <ul>
-                            <li>
-                                <dl>
-                                    <dt><strong><a href="#alex-petrucci" title="click to find out more about Alex Petrucci">Alex Petrucci</a></strong></dt>
-                                    <dd>
-                                        <dl>
-                                            <dt><strong>Student ID:</strong></dt>
-                                            <dd>105927117</dd>
-                                        </dl>
-                                        <dl>
-                                            <dt><strong>Contribution:</strong></dt>
-                                            <dd>jobs.php, header.php, footer.php, styles.css, jobs description table, clickmaxxing_db.sql</dd>
-                                        </dl>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt><strong><a href="#mohamed-aarriz-mohamed-habeeb" title="click to find out more about Mohamed Aarriz Mohamed Habeeb">Mohamed Aarriz Mohamed Habeeb</a></strong></dt>
-                                    <dd>
-                                        <dl>
-                                            <dt><strong>Student ID:</strong></dt>
-                                            <dd>105249112</dd>
-                                        </dl>
-                                        <dl>
-                                            <dt><strong>Contribution:</strong></dt>
-                                            <dd>index.php, header.php, footer.php, styles.css, manage.php, clickmaxxing_db.sql</dd>
-                                        </dl>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt><strong><a href="#carl-petrucci" title="click to find out more about Carl Petrucci">Carl Petrucci</a></strong></dt>
-                                    <dd>
-                                        <dl>
-                                            <dt><strong>Student ID:</strong></dt>
-                                            <dd>105928301</dd>
-                                        </dl>
-                                        <dl>
-                                            <dt><strong>Contribution:</strong></dt>
-                                            <dd>about.php, header.php, footer.php, styles.css, settings.php, include files, enhancments.php</dd>
-                                        </dl>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt><strong><a href="#kunvuth-you" title="click to find out more about Kunvuth You">Kunvuth You</a></strong></dt>
-                                    <dd>
-                                        <dl>
-                                            <dt><strong>Student ID:</strong></dt>
-                                            <dd>105730302</dd>
-                                        </dl>
-                                        <dl>
-                                            <dt><strong>Contribution:</strong></dt>
-                                            <dd>apply.php, header.php, footer.php, styles.css, EOI table, proccess_eoi.php, clickmaxxing_db.sql</dd>
-                                        </dl>
-                                    </dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </section>
+            </section>
+            <!--This section contains basic information for identifying group members in an unordered list-->
+            
+            <section id="group-details">
+                <div id="details">
+                    <h3>Group details:</h3>
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt><strong>Group name:</strong></dt>
+                                <dd>ClickMaXXing</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt><strong>Class time:</strong></dt>
+                                <dd>Monday from 2:30pm to 4:30pm</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt><strong>Tutor:</strong></dt>
+                                <dd>Mr. Enrique Nicolas Ketterer Ortiz (Nick)</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <strong>Members</strong>
+                            <ul>
+                                <li>
+                                    <dl>
+                                        <dt><strong><a href="#alex-petrucci" title="click to find out more about Alex Petrucci">Alex Petrucci</a></strong></dt>
+                                        <dd>
+                                            <dl>
+                                                <dt><strong>Student ID:</strong></dt>
+                                                <dd>105927117</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><strong>Contribution:</strong></dt>
+                                                <dd>jobs.php, header.php, footer.php, styles.css, jobs description table, clickmaxxing_db.sql</dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><strong><a href="#mohamed-aarriz-mohamed-habeeb" title="click to find out more about Mohamed Aarriz Mohamed Habeeb">Mohamed Aarriz Mohamed Habeeb</a></strong></dt>
+                                        <dd>
+                                            <dl>
+                                                <dt><strong>Student ID:</strong></dt>
+                                                <dd>105249112</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><strong>Contribution:</strong></dt>
+                                                <dd>index.php, header.php, footer.php, styles.css, manage.php, clickmaxxing_db.sql</dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><strong><a href="#carl-petrucci" title="click to find out more about Carl Petrucci">Carl Petrucci</a></strong></dt>
+                                        <dd>
+                                            <dl>
+                                                <dt><strong>Student ID:</strong></dt>
+                                                <dd>105928301</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><strong>Contribution:</strong></dt>
+                                                <dd>about.php, header.php, footer.php, styles.css, settings.php, include files, enhancments.php</dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><strong><a href="#kunvuth-you" title="click to find out more about Kunvuth You">Kunvuth You</a></strong></dt>
+                                        <dd>
+                                            <dl>
+                                                <dt><strong>Student ID:</strong></dt>
+                                                <dd>105730302</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><strong>Contribution:</strong></dt>
+                                                <dd>apply.php, header.php, footer.php, styles.css, EOI table, proccess_eoi.php, clickmaxxing_db.sql</dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
         
         <!--this section contains other information about our group which is not important for identifying who was involved in creating this project-->
 

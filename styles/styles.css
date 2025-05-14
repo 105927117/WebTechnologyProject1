@@ -10,9 +10,9 @@ description: Styles for every page in this project.
 :root {
     --light-colour: #f4f4f4;
     --dark-colour: #1d1d1d;
-    --mid-colour: #247c77;
-    --accent-colour-1: #1AA8A1;
-    --accent-colour-2: #495298;
+    --mid-colour: #9ed091;
+    --accent-colour-1: #daf8d0;
+    --accent-colour-2: #3e5040;
 
     --background-colour: var(--light-colour);
     --hover-colour: var(--mid-colour);
@@ -623,10 +623,18 @@ legend {
 }
 /*---------------------------ABOUT--------------------------------*/
 
+/*styling to correctly possition sections within the top of the about page*/
+#top-of-about-page{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /*styles ensure group details are on the right hand side*/
 #group-details{
-    display: flex;
+    display: block;
+    margin-left: auto;
     float: right;
+    max-width: 40rem;
 }
 
 /*since student IDs are required to be on the right in this task, I just made all of the descriptions go on the right*/
@@ -636,17 +644,17 @@ legend {
 
 /*this makes the group details section display like a seperate block, simmilar to the styling of the other pages*/
 #details{
-    background-color: var(--header-colour);
+    background-color: var(--accent-color);
     border-radius: 1rem;
     border-color: var(--accent-color);
     border-style: solid;
     padding: 1rem;
-    color: var(--header-text-colour);
+    color: var(--text-color);
 }
 
 /*this makes the heading of the group details list, and the bold sections within the list stand out by using a different colour*/
 #details h3, #details li strong{
-    color: var(--contrast-heading-colour);
+    color: var(--text-color);
 }
 
 /*this removes the bullet points from unordered lists*/
