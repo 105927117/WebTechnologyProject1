@@ -36,14 +36,14 @@ description: Styles for every page in this project.
         --hover-colour: var(--mid-colour);
         --hover-text-colour: var(--dark-colour);
         --hover-shadow-colour: var(--accent-colour-2);
-        --accent-color: var(--accent-colour-1);
+        --accent-color: var(--accent-colour-2);
         --text-colour: var(--light-colour);
-        --header-colour: var(--light-colour);
-        --header-text-colour: var(--dark-colour);
-        --button-colour: var(--accent-colour-2);
+        --header-colour: var(--accent-colour-2);
+        --header-text-colour: var(--light-colour);
+        --button-colour: var(--dark-colour);
         --button-text-colour: var(--light-colour);
         --heading-colour: var(--accent-colour-1);
-        --contrast-heading-colour: var(--accent-colour-2);
+        --contrast-heading-colour: var(--accent-colour-1);
         --contrast-text-colour: var(--dark-colour);
     }
 }
@@ -66,7 +66,7 @@ body {
 
 /* Styles for logo in the header of the page */
 header svg {
-    color: var(--accent-color);
+    color: var(--contrast-heading-colour);
     width: min(100vw, 20rem);
     padding: 1rem;
     box-sizing: border-box;
@@ -180,7 +180,7 @@ header ul {
 /* Styles for link of the current page inside the navigation in the header of the page */
 .current-page {
     color: var(--dark-colour);
-    background-color: var(--accent-color);
+    background-color: var(--contrast-heading-colour);
 }
 
 /*Styling to keep svg for selected page consistent with text*/
@@ -196,8 +196,8 @@ main {
 
 /* Styles for any aside elements on any page */
 aside {
-    background-color: var(--header-colour);
-    color: var(--header-text-colour);
+    background-color: var(--accent-color);
+    color: var(--text-color);
     border-radius: 1rem;
     padding: 1rem;
     width: max(25%, 15rem);
@@ -206,11 +206,6 @@ aside {
     border-color: var(--accent-color);
     border-style: solid;
     overflow: hidden;
-}
-
-/* Styles for headings inside aside elements */
-aside h1, aside h2 {
-    color: var(--contrast-heading-colour);
 }
 
 /* Styles for headings on any page */
@@ -256,7 +251,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    background-color: var(--header-colour);
+    background-color: var(--accent-color);
     border-radius: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -265,16 +260,6 @@ h1 {
     margin: 1rem auto;
     border-color: var(--accent-color);
     border-style: solid;
-}
-
-/* Styles for headings inside description cards */
-.description-card h1, .description-card h2 {
-    color: var(--contrast-heading-colour);
-}
-
-/* Styles for regular text inside description cards */
-.description-card p {
-    color: var(--header-text-colour);
 }
 
 /* Styles for images which go inside description cards */
@@ -541,7 +526,7 @@ legend {
 
 }
 
-/*styling for the maincontent for home page*/
+/* styling for the maincontent for home page
 #sub_head {
     background-color: var(--dark-colour);
     background-repeat: no-repeat;
@@ -555,7 +540,7 @@ legend {
 
 #sub_head h2 {
     color: var(--accent-colour-1);
-}
+} */
 
 #abt_company h2{
     display: flex;   /*styling of layout for the about company section*/
@@ -722,7 +707,7 @@ table caption h3, td strong{
 /*this changes the colour of table cells and text within table cells when hovered over, as specified by the project requirements*/
 td:hover, td:hover strong{
     background-color: var(--hover-colour);
-    color: var(--light-colour);
+    color: var(--header-colour);
 }
 
 /*this prevents the hr element from being shrunken or displayed weirdly next to floating elements*/
@@ -746,7 +731,6 @@ td a{
 td a:hover{
     background-color: transparent;
     box-shadow: none;
-    color: var(--light-colour);
 }
 
 /*this helps the figures in the table wrap around when resizing for small screens*/
@@ -777,6 +761,7 @@ td {
     text-align: center;
 }
 
+/*keeps description of hometown at the top of the cell*/
 .hometown{
     padding: 1rem;
     vertical-align: top;
