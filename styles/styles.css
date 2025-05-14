@@ -152,6 +152,7 @@ header ul li a, main a {
     text-decoration: none;
     background-color: var(--button-colour);
     border-radius: 1rem;
+    margin: 1rem;
     width: 20vw;
     text-align: center;
     transition-duration: 0.25s;
@@ -649,7 +650,7 @@ legend {
     border-color: var(--accent-color);
     border-style: solid;
     padding: 1rem;
-    margin: 1rem;
+    margin-right: 1rem;
     color: var(--text-color);
 }
 

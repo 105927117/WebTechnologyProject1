@@ -74,6 +74,7 @@ include_once("header.php");
                                             </dl>
                                         </dd>
                                     </dl>
+                                    <hr>
                                 </li>
                                 <li>
                                     <dl>
