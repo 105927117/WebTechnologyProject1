@@ -56,9 +56,11 @@ include_once("header.php");
                                 <dt><strong>Tutor:</strong></dt>
                                 <dd>Mr. Enrique Nicolas Ketterer Ortiz (Nick)</dd>
                             </dl>
+                            <hr>
                         </li>
                         <li>
-                            <strong>Members</strong>
+                            <strong>Members:</strong>
+                            <hr>
                             <ul>
                                 <li>
                                     <dl>
@@ -90,6 +92,7 @@ include_once("header.php");
                                             </dl>
                                         </dd>
                                     </dl>
+                                    <hr>
                                 </li>
                                 <li>
                                     <dl>
@@ -105,6 +108,7 @@ include_once("header.php");
                                             </dl>
                                         </dd>
                                     </dl>
+                                    <hr>
                                 </li>
                                 <li>
                                     <dl>
@@ -120,6 +124,7 @@ include_once("header.php");
                                             </dl>
                                         </dd>
                                     </dl>
+                                    <hr>
                                 </li>
                             </ul>
                         </li>
@@ -138,38 +143,38 @@ include_once("header.php");
                 <caption><h3>Alex Petrucci</h3></caption>
                 <tr>
                     <td><strong>Hobbies and interests</strong></td>
-                    <td>Gaming, Programming, Basketball</td>
+                    <td class="table-column-2">Gaming, Programming, Basketball</td>
                 </tr>
                 <tr>
                     <td><strong>Programming skills</strong></td>
-                    <td>Python, Ruby, HTML, CSS, JavaScript, C++, PHP, Unreal Engine, Scratch</td>
+                    <td class="table-column-2">Python, Ruby, HTML, CSS, JavaScript, C++, PHP, Unreal Engine, Scratch</td>
                 </tr>
                 <tr>
                     <td><Strong>University</Strong></td>
-                    <td>Swinburne University of Technology</td>
+                    <td class="table-column-2">Swinburne University of Technology</td>
                 </tr>
                 <tr>
                     <td><strong>Currently studying</strong></td>
-                    <td>Bachelor of Computer Science</td>
+                    <td class="table-column-2">Bachelor of Computer Science</td>
                 </tr>
                 <tr>
                     <td><strong>Favourite movie</strong></td>
-                    <td>Get Hard</td>
+                    <td class="table-column-2">Get Hard</td>
                 </tr>
                 <tr>
                     <td><strong>Favourite book</strong></td>
-                    <td>Harry Potter</td>
+                    <td class="table-column-2">Harry Potter</td>
                 </tr>
                 <tr>
                     <td><strong>Favourite videogame</strong></td>
-                    <td>Minecraft</td>
+                    <td class="table-column-2">Minecraft</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><strong>Home town</strong></td>
+                    <td colspan="2"><strong>Home town:</strong></td>
                 </tr>
                 <tr>
-                    <td>I am from Ringwood North, which is one of Melbourne's outer eastern suburbs.</td>
-                    <td>
+                    <td class="hometown">I am from Ringwood North, which is one of Melbourne's outer eastern suburbs.</td>
+                    <td class="table-image">
                         <!--Since we are not allowed to use the iframe tag or javascript, anchoring a figure to google maps seemed to be the easiest way to allow users to see a map of the home town-->
                         <a href="https://www.google.com.au/maps/place/Ringwood+North+VIC+3134/@-37.7920692,145.1925849,14z/data=!3m1!4b1!4m6!3m5!1s0x6ad63a2177d73d99:0x5045675218cd5c0!8m2!3d-37.795271!4d145.2352519!16zL20vMDU3OTlk?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D">
                             <figure title="click to visit google maps">
@@ -187,38 +192,38 @@ include_once("header.php");
                 <caption><h3>Mohamed Aarriz Mohamed Habeeb</h3></caption>
                 <tr>
                     <td><strong>Hobbies and interests</strong></td>
-                    <td>Playing sports, Reading books</td>
+                    <td class="table-column-2">Playing sports, Reading books</td>
                 </tr>
                 <tr>
                     <td><strong>Programming skills</strong></td>
-                    <td>Python, SQL, Linux</td>
+                    <td class="table-column-2">Python, SQL, Linux</td>
                 </tr>
                 <tr>
                     <td><Strong>University</Strong></td>
-                    <td>Swinburne University of Technology</td>
+                    <td class="table-column-2">Swinburne University of Technology</td>
                 </tr>
                 <tr>
                     <td><strong>Currently studying</strong></td>
-                    <td>Bachelor of Computer Science</td>
+                    <td class="table-column-2">Bachelor of Computer Science</td>
                 </tr>
                 <tr>
                     <td><strong>Favourite movie</strong></td>
-                    <td>Deadpool</td>
+                    <td class="table-column-2">Deadpool</td>
                 </tr>
                 <tr>
                     <td><strong>Favourite book</strong></td>
-                    <td>Psychology of money</td>
+                    <td class="table-column-2">Psychology of money</td>
                 </tr>
                 <tr>
                     <td><strong>Favourite videogame</strong></td>
-                    <td>Read Dead Redemption 2</td>
+                    <td class="table-column-2">Read Dead Redemption 2</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><strong>Home town</strong></td>
+                    <td colspan="2"><strong>Home town:</strong></td>
                 </tr>
                 <tr>
-                    <td>I am from Truganina, which is a western Suburb.</td>
-                    <td>
+                    <td class="hometown">I am from Truganina, which is a western Suburb.</td>
+                    <td class="table-image">
                         <!--Since we are not allowed to use the iframe tag or javascript, anchoring a figure to google maps seemed to be the easiest way to allow users to see a map of the home town-->
                         <a href="https://www.google.com.au/maps/place/Truganina+VIC+3029/@-37.8016121,144.6317536,12z/data=!3m1!4b1!4m6!3m5!1s0x6ad65f0d91f81657:0x5045675218cd570!8m2!3d-37.8248334!4d144.7486991!16zL20vMDR2djk1?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D">
                             <figure title="click to visit google maps">
@@ -236,38 +241,38 @@ include_once("header.php");
                 <caption><h3>Carl Petrucci</h3></caption>
                 <tr>
                     <td><strong>Hobbies and interests</strong></td>
-                    <td>Gaming, Programming, Basketball, Minecraft, Skyrim, Forza, Game development, Comics</td>
+                    <td class="table-column-2">Gaming, Programming, Basketball, Minecraft, Skyrim, Forza, Game development, Comics</td>
                 </tr>
                 <tr>
                     <td><strong>Programming skills</strong></td>
-                    <td>Python, Ruby, HTML, CSS, JavaScript, C++, PHP, Unreal Engine, Scratch</td>
+                    <td class="table-column-2">Python, Ruby, HTML, CSS, JavaScript, C++, PHP, Unreal Engine, Scratch</td>
                 </tr>
                 <tr>
                     <td><Strong>University</Strong></td>
-                    <td>Swinburne University of Technology</td>
+                    <td class="table-column-2">Swinburne University of Technology</td>
                 </tr>
                 <tr>
                     <td><strong>Currently studying</strong></td>
-                    <td>Bachelor of Computer Science</td>
+                    <td class="table-column-2">Bachelor of Computer Science</td>
                 </tr>
                 <tr>
                     <td><strong>Favourite movie</strong></td>
-                    <td>You Don't Mess With The Zohan</td>
+                    <td class="table-column-2">You Don't Mess With The Zohan</td>
                 </tr>
                 <tr>
                     <td><strong>Favourite book</strong></td>
-                    <td>Batman Volume 1: The Court of Owls</td>
+                    <td class="table-column-2">Batman Volume 1: The Court of Owls</td>
                 </tr>
                 <tr>
                     <td><strong>Favourite videogame</strong></td>
-                    <td>Marvel's Spiderman</td>
+                    <td class="table-column-2">Marvel's Spiderman</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><strong>Home town</strong></td>
+                    <td colspan="2"><strong>Home town:</strong></td>
                 </tr>
                 <tr>
-                    <td>I am from Ringwood North, which is one of Melbourne's outer eastern suburbs.</td>
-                    <td>
+                    <td class="hometown">I am from Ringwood North, which is one of Melbourne's outer eastern suburbs.</td>
+                    <td class="table-image">
                         <!--Since we are not allowed to use the iframe tag or javascript, anchoring a figure to google maps seemed to be the easiest way to allow users to see a map of the home town-->
                         <a href="https://www.google.com.au/maps/place/Ringwood+North+VIC+3134/@-37.7920692,145.1925849,14z/data=!3m1!4b1!4m6!3m5!1s0x6ad63a2177d73d99:0x5045675218cd5c0!8m2!3d-37.795271!4d145.2352519!16zL20vMDU3OTlk?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D">
                             <figure title="click to visit google maps">
@@ -285,38 +290,38 @@ include_once("header.php");
                 <caption><h3>Kunvuth You</h3></caption>
                 <tr>
                     <td><strong>Hobbies and interests</strong></td>
-                    <td>Guitar, Mobile gaming, Chess, Netflix, Chrunchyroll, Coding</td>
+                    <td class="table-column-2">Guitar, Mobile gaming, Chess, Netflix, Chrunchyroll, Coding</td>
                 </tr>
                 <tr>
                     <td><strong>Programming skills</strong></td>
-                    <td>Python, Ruby, HTML, CSS</td>
+                    <td class="table-column-2">Python, Ruby, HTML, CSS</td>
                 </tr>
                 <tr>
                     <td><Strong>University</Strong></td>
-                    <td>Swinburne University of Technology</td>
+                    <td class="table-column-2">Swinburne University of Technology</td>
                 </tr>
                 <tr>
                     <td><strong>Currently studying</strong></td>
-                    <td>Bachelor of Computer Science</td>
+                    <td class="table-column-2">Bachelor of Computer Science</td>
                 </tr>
                 <tr>
                     <td><strong>Favourite movie</strong></td>
-                    <td>Dr Strange</td>
+                    <td class="table-column-2">Dr Strange</td>
                 </tr>
                 <tr>
                     <td><strong>Favourite book</strong></td>
-                    <td>Percy Jackson</td>
+                    <td class="table-column-2">Percy Jackson</td>
                 </tr>
                 <tr>
                     <td><strong>Favourite videogame</strong></td>
-                    <td>Minecraft</td>
+                    <td class="table-column-2">Minecraft</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><strong>Home town</strong></td>
+                    <td colspan="2"><strong>Home town:</strong></td>
                 </tr>
                 <tr>
-                    <td>I am from Phnom Penh, the capital city of Cambodia.</td>
-                    <td>
+                    <td class="hometown">I am from Phnom Penh, the capital city of Cambodia.</td>
+                    <td class="table-image">
                         <!--Since we are not allowed to use the iframe tag or javascript, anchoring a figure to google maps seemed to be the easiest way to allow users to see a map of the home town-->
                         <a href="https://www.google.com.au/maps/place/Phnom+Penh,+Cambodia/@11.5796538,104.7250328,11z/data=!3m1!4b1!4m6!3m5!1s0x3109513dc76a6be3:0x9c010ee85ab525bb!8m2!3d11.5563738!4d104.9282099!16zL20vMGRsd2o?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D">
                             <figure title="click to visit google maps">

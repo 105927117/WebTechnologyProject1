@@ -152,7 +152,8 @@ header ul li a, main a {
     text-decoration: none;
     background-color: var(--button-colour);
     border-radius: 1rem;
-    margin: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     width: 20vw;
     text-align: center;
     transition-duration: 0.25s;
@@ -659,9 +660,11 @@ legend {
     color: var(--text-color);
 }
 
-/*this removes the bullet points from unordered lists*/
+/*this removes the bullet points and indentation from unordered lists*/
 #details ul{
     list-style: none;
+    margin-left: 0;
+    display: contents;
 }
 
 /*this ensures that the member profiles stack vertically*/
@@ -753,4 +756,21 @@ td a figure img{
 /*this keeps the table cells at a consistant width*/
 td {
     width: 40vw;
+}
+
+/*this aligns the text in the second column of tables on the right hand side*/
+.table-column-2{
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+}
+
+/*this keeps the maps in the center of table cells*/
+.table-image{
+    text-align: center;
+}
+
+.hometown{
+    padding: 1rem;
+    vertical-align: top;
 }
