@@ -670,8 +670,14 @@ legend {
 /*this ensures that the member profiles stack vertically*/
 #member-profiles{
     display: block;
+    margin-left: 2rem;
 }
 
+@media (max-width: 600px){
+    #member-profiles{
+        margin-left: -1rem;
+    }
+}
 /*these styles give the group photo a boarder, float it to the right, and help keep the sizing correct*/
 #group-photo{
     border-radius: 1rem;
@@ -692,11 +698,12 @@ legend {
 
 /*these styles keep the tables aligned and sized correctly and give tables the standard background color*/
 table{
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    background-color: var(--background-colour);
+    background-color: var(--accent-color);
     width: 90vw;
 }
 
