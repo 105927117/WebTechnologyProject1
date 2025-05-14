@@ -649,6 +649,7 @@ legend {
     border-color: var(--accent-color);
     border-style: solid;
     padding: 1rem;
+    margin: 1rem;
     color: var(--text-color);
 }
 
