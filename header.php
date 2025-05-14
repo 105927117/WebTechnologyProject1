@@ -1,3 +1,4 @@
+<!--header also includes DOCTYPE, opening tags for html and body, and the complete head section-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Alex Petrucci, Carl Petrucci, Kunvuth You, Mohamed Aarriz Mohamed Habeeb">
+    <!--keywords change dynamically based on page variable-->
     <meta name="keywords" content=<?php
     if ($page == "home"){
         echo("'ClickMaXXing, COS10026, webpage, website, web development, IT, web solutions, home, company info'");
@@ -18,7 +20,7 @@
     if ($page == "about"){
         echo("'ClickMaXXing, COS10026, webpage, website, web development, IT, web solutions, about, Alex Petrucci, Mohamed Aarriz Mohamed Habeeb, Kunvuth You, Carl Petrucci, Swinburne, students, team, computer science'");
     }
-    ?>> <!--ADD EXTRA FOR YOUR PAGE-->
+    ?>> <!--description changes dynamically based on page variable-->
     <meta name="description" content=<?php
     if ($page == "home"){
         echo("'ClickMaXXing is an organisation which specialises in empowering your business with high quality web solutions. From our home page, learn more about our organisation, or flick to the other pages to see how you could be a part of this organisation's future!'");
@@ -34,7 +36,7 @@
     }
     ?>>
     <!--Title of the page which shows on the tab-->
-    <title>ClickMaXXing | <!--PUT YOU PAGE NAME HERE--></title>
+    <title>ClickMaXXing | <?php echo($page); ?></title>
     <!--Link to styles-->
     <link rel="stylesheet" href="styles/styles.css">
 </head>

@@ -1,3 +1,4 @@
+<!--footer also includes closing tags for html and body-->
     <footer>
         <p>&copy; ClickMaXXing 2025. All rights reserved.</p>
         <p><em>Web solutions made easy.</em></p>
