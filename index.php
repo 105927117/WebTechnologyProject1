@@ -38,7 +38,7 @@ mysqli_close($conn);
         <section id="abt_company">        <!--created section tags for contents to group them -->
             <h2>About ClickMaXXing</h2>
             <p>Australia's one of the newest and largest IT network, providing solutions to more than 100 countries around the world.</p>
-            <img src="/images/about_us.jpeg" alt="our company's performance over the Years"  class="about-img" > <!--image took from google-->
+            <img src="images/about_us.jpeg" alt="our company's performance over the Years"  class="about-img" > <!--image took from google-->
             
         </section>
 
@@ -95,7 +95,7 @@ mysqli_close($conn);
         <!--content from Gen AI-->
         <section id="closure">
             <h2>Why Work with us?</h2>       <!--used image tag for adding image to the section-->
-            <img src="/images/whychoosee.jpeg" alt="image describes about why choosing ClickMaXXing" class="whychoosee">
+            <img src="images/whychoosee.jpeg" alt="image describes about why choosing ClickMaXXing" class="whychoosee">
             <ul>                                                 <!--created unordered lists tags to create a list-->
                 <li>✅ Competitive Salaries</li>
                 <li>✅ Flexible Work Environment</li>
