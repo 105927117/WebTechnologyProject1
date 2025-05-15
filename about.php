@@ -178,7 +178,7 @@ include_once("header.php");
                         <!--Since we are not allowed to use the iframe tag or javascript, anchoring a figure to google maps seemed to be the easiest way to allow users to see a map of the home town-->
                         <a href="https://www.google.com.au/maps/place/Ringwood+North+VIC+3134/@-37.7920692,145.1925849,14z/data=!3m1!4b1!4m6!3m5!1s0x6ad63a2177d73d99:0x5045675218cd5c0!8m2!3d-37.795271!4d145.2352519!16zL20vMDU3OTlk?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D">
                             <figure title="click to visit google maps">
-                                <img src="images/ringwood_north.png" alt="map view of Ringwood North">
+                                <img src="images/ringwood_north.jpg" alt="map view of Ringwood North">
                                 <figcaption>Image of Ringwood North. (from google maps)</figcaption>
                             </figure>
                         </a>
@@ -227,7 +227,7 @@ include_once("header.php");
                         <!--Since we are not allowed to use the iframe tag or javascript, anchoring a figure to google maps seemed to be the easiest way to allow users to see a map of the home town-->
                         <a href="https://www.google.com.au/maps/place/Truganina+VIC+3029/@-37.8016121,144.6317536,12z/data=!3m1!4b1!4m6!3m5!1s0x6ad65f0d91f81657:0x5045675218cd570!8m2!3d-37.8248334!4d144.7486991!16zL20vMDR2djk1?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D">
                             <figure title="click to visit google maps">
-                                <img src="images/truganina.png" alt="map view of Truganina">
+                                <img src="images/truganina.jpg" alt="map view of Truganina">
                                 <figcaption>Image of Truganina. (from google maps)</figcaption>
                             </figure>
                         </a>
@@ -276,7 +276,7 @@ include_once("header.php");
                         <!--Since we are not allowed to use the iframe tag or javascript, anchoring a figure to google maps seemed to be the easiest way to allow users to see a map of the home town-->
                         <a href="https://www.google.com.au/maps/place/Ringwood+North+VIC+3134/@-37.7920692,145.1925849,14z/data=!3m1!4b1!4m6!3m5!1s0x6ad63a2177d73d99:0x5045675218cd5c0!8m2!3d-37.795271!4d145.2352519!16zL20vMDU3OTlk?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D">
                             <figure title="click to visit google maps">
-                                <img src="images/ringwood_north.png" alt="map view of Ringwood North">
+                                <img src="images/ringwood_north.jpg" alt="map view of Ringwood North">
                                 <figcaption>Image of Ringwood North. (from google maps)</figcaption>
                             </figure>
                         </a>
@@ -325,7 +325,7 @@ include_once("header.php");
                         <!--Since we are not allowed to use the iframe tag or javascript, anchoring a figure to google maps seemed to be the easiest way to allow users to see a map of the home town-->
                         <a href="https://www.google.com.au/maps/place/Phnom+Penh,+Cambodia/@11.5796538,104.7250328,11z/data=!3m1!4b1!4m6!3m5!1s0x3109513dc76a6be3:0x9c010ee85ab525bb!8m2!3d11.5563738!4d104.9282099!16zL20vMGRsd2o?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D">
                             <figure title="click to visit google maps">
-                                <img src="images/phnom_penh.png" alt="map view of Phnom Penh">
+                                <img src="images/phnom_penh.jpg" alt="map view of Phnom Penh">
                                 <figcaption>Image of Phnom Penh. (from google maps)</figcaption>
                             </figure>
                         </a>
