@@ -164,7 +164,6 @@ header ul li a, main a {
 header ul li a:hover, main a:hover{
     background-color: var(--hover-colour);
     color: var(--hover-text-colour);
-    box-shadow: 0.5rem 0.5rem var(--hover-shadow-colour);
 }
 
 /* Styles for list of nav links inside the header of the page */
