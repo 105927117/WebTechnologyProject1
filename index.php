@@ -38,7 +38,7 @@ mysqli_close($conn);
         <section id="abt_company">        <!--created section tags for contents to group them -->
             <h2>About ClickMaXXing</h2>
             <p>Australia's one of the newest and largest IT network, providing solutions to more than 100 countries around the world.</p>
-            <img src="images/about_us.jpeg" alt="our company's performance over the Years"  class="about-img" > <!--image took from google-->
+            <img src="images/about_us.jpg" alt="our company's performance over the Years"  class="about-img" > <!--image took from google-->
             
         </section>
 
