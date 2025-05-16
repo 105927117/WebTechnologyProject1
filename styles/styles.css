@@ -442,10 +442,13 @@ legend {
 .selection-label{
     display: flex;
     justify-content: flex-start;
-   
 }
 
-.radio-label, .selection-label * {
+input[type="checkbox"] {
+    width: 1rem;
+}
+
+.radio-label {
     width: 5rem;
 }
 

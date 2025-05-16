@@ -108,13 +108,15 @@ mysqli_close($conn);
                 <label class="required" >Required technical list:</label>
                 <?php
                 foreach ($jobs as $job) {
-                    $title = strtolower(str_replace(" ", "-", $job["title"]));
+                    $skills = $job["essential_qualifications"];
+                    foreach (explode("\n", $skills) as $skill) {
                 ?>
                 <div class="selection-label">
-                    <input class="selection-box" type="checkbox" name="<?= $title ?>" id="<?= $title ?>" value="<?= $title ?>">
-                    <label for="<?= $title ?>"><?= $job["title"] ?></label>
+                    <input class="selection-box" type="checkbox" name="skills[]" id="<?= $skill ?>" value="<?= $skill ?>">
+                    <label for="<?= $skill ?>"><?= $skill ?></label>
                 </div>
                 <?php
+                    }
                 }
                 ?>
                 <label for="Other-skills">Other Skills:</label>
