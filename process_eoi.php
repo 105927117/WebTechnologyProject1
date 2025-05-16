@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
             `Phone-number` VARCHAR(20) NOT NULL,
             `Skills` VARCHAR(50) NOT NULL,
             `Other-skills` TEXT DEFAULT NULL
-            'status' ENUM('pending','accepted','rejected') NOT NULL DEFAULT 'pending'
+            'status' ENUM('New','Current','Final') NOT NULL DEFAULT 'Final'
         )";
         if (mysqli_query($conn, $create_table)){
             $result = mysqli_query($conn, $query);
