@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
     $postcode = clean_input($_POST["Postcode"]);
     $email = clean_input($_POST["Email"]);
     $phone = clean_input($_POST["Phone-number"]);
-    $skills = clean_input($_POST["Skills"]);###########
+    $skills = clean_input($_POST["skills"]);###########
     #if other skills are not provided, set to null
     $other_skills = isset($_POST["Other-skills"]) ? clean_input($_POST["Other-skills"]) : "";
     #check if all required fields are filled
