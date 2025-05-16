@@ -442,10 +442,18 @@ legend {
 .selection-label{
     display: flex;
     justify-content: flex-start;
-   
+    padding: 1rem;
 }
 
-.radio-label, .selection-label * {
+.skill-list {
+    display: grid;
+}
+
+input[type="checkbox"] {
+    width: 1rem;
+}
+
+.radio-label {
     width: 5rem;
 }
 
