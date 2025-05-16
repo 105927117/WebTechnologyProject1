@@ -442,11 +442,6 @@ legend {
 .selection-label{
     display: flex;
     justify-content: flex-start;
-    padding: 1rem;
-}
-
-.skill-list {
-    display: grid;
 }
 
 input[type="checkbox"] {
