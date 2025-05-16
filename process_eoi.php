@@ -1,6 +1,9 @@
 <?php
 session_start();
 require_once ('./settings.php');
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 #sanitize user input to avoid code injection
 function clean_input($data) {
     $data = trim($data);
@@ -21,7 +24,10 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
     $postcode = clean_input($_POST["Postcode"]);
     $email = clean_input($_POST["Email"]);
     $phone = clean_input($_POST["Phone-number"]);
-    $skills = clean_input($_POST["Skills"]);###########
+    $skills = "";
+    foreach ($_POST["skills"] as $skill) {
+        $skills .= clean_input($skill) . "\n";
+    } 
     #if other skills are not provided, set to null
     $other_skills = isset($_POST["Other-skills"]) ? clean_input($_POST["Other-skills"]) : "";
     #check if all required fields are filled
@@ -58,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
     if (!preg_match("/^[\d\s]{8,12}$/", $phone)) {
         die("Invalid phone number. Only digits and spaces, 8–12 characters.");
     }
-    ###### add one for $skills if needed
+    
     $query = "INSERT INTO eoi (
     `Job-reference-number`, 
     `first-name`, 
@@ -105,7 +111,8 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
             `Email` VARCHAR(100) NOT NULL,
             `Phone-number` VARCHAR(20) NOT NULL,
             `Skills` VARCHAR(50) NOT NULL,
-            `Other-skills` TEXT NULL
+            `Other-skills` TEXT DEFAULT NULL
+            'status' ENUM('pending','accepted','rejected') NOT NULL DEFAULT 'pending'
         )";
         if (mysqli_query($conn, $create_table)){
             $result = mysqli_query($conn, $query);
