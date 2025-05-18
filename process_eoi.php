@@ -55,6 +55,23 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
     if (!preg_match("/^\d{4}$/", $postcode)) {
         die("Invalid postcode. Must be exactly 4 digits.");
     }
+    # State to postcode prefix mapping
+    $state_postcode_map = [        # => operator is used inside arrays to assign a key to a value
+        'VIC' => ['3', '8'], 
+        'NSW' => ['1', '2'],
+        'QLD' => ['4', '9'],
+        'NT'  => ['0'],
+        'WA'  => ['6'],
+        'SA'  => ['5'],
+        'TAS' => ['7'],
+        'ACT' => ['0']
+    ];
+
+    $first_digit = substr($postcode, 0, 1);
+
+    if (!in_array($first_digit, $state_postcode_map[$state])) {
+        die("Postcode does not match the selected state.");
+    }
     # use filter_var instead of preg_match because regex won’t cover all valid email formats
     # and filter_var is more efficient and safer than preg_match
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -91,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
     '$postcode', 
     '$email', 
     '$phone', 
-    '$skills', ##########
+    '$skills', 
     '$other_skills'
     )";
     $result = mysqli_query($conn, $query);
@@ -124,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
         }
     }
     
-    echo "Application submitted successfully.";
+    echo "Application submitted successfully. EOI number: " . mysqli_insert_id($conn);
     mysqli_close($conn);
 } else {
     header("Location: ./apply.php");
