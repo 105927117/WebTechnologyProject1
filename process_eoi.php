@@ -126,5 +126,8 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
     
     echo "Application submitted successfully.";
     mysqli_close($conn);
+} else {
+    header("Location: ./apply.php");
+    exit;
 }
 ?>
