@@ -123,7 +123,6 @@ mysqli_close($conn);
                 <input class="selection-box" type="checkbox" name="skills[]" id="Other" value="Other">
                 <label for="Other">Other.</label>
                 </div>
-                <br>
                 <textarea name="Other-skills" id="Other-skills" placeholder="Write down your other skills here...." rows="6" cols="25"></textarea>
         </section>
 

@@ -773,3 +773,11 @@ td {
     padding: 1rem;
     vertical-align: top;
 }
+
+#Other-skills {
+    display: none;
+}
+
+.selection-label:has(#Other:checked) + #Other-skills {
+    display: block;
+}
