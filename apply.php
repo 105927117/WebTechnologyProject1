@@ -19,7 +19,7 @@ if ($result) {
 mysqli_close($conn);
 ?>
 
-<main>
+<main class="thin-main">
     <form action="process_eoi.php" method="post" novalidate>
 
         <section id="application-details">
