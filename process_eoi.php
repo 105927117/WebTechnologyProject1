@@ -96,19 +96,19 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
     }
     
     $query = "INSERT INTO eoi (
-    `Job-reference-number`, 
-    `first-name`, 
-    `last-name`, 
-    `Date-of-Birth`, 
+    `Jobrefnum`, 
+    `firstname`, 
+    `lastname`, 
+    `DOB`, 
     `Gender`, 
-    `Street-Address`, 
+    `StreetAddress`, 
     `Suburb`, 
     `State`, 
     `Postcode`, 
     `Email`, 
-    `Phone-number`, 
+    `Phonenumber`, 
     `Skills`, 
-    `Other-skills`)
+    `Otherskills`)
     VALUES (
     '$job_ref', 
     '$first_name', 
@@ -129,19 +129,19 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
         # Create the table
         $create_table = "CREATE TABLE IF NOT EXISTS eoi (
             EOInumber INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
-            `Job-reference-number` VARCHAR(20) NOT NULL,
-            `first-name` VARCHAR(20) NOT NULL,
-            `last-name` VARCHAR(20) NOT NULL,
-            `Date-of-Birth` DATE NOT NULL,
+            `Jobrefnum` VARCHAR(20) NOT NULL,
+            `firstname` VARCHAR(20) NOT NULL,
+            `lastname` VARCHAR(20) NOT NULL,
+            `DOB` DATE NOT NULL,
             `Gender` ENUM('Male','Female','Others') NOT NULL,
-            `Street-Address` VARCHAR(40) NOT NULL,
+            `StreetAddress` VARCHAR(40) NOT NULL,
             `Suburb` VARCHAR(40) NOT NULL,
             `State` ENUM('VIC','NSW','QLD','NT','WA','SA','TAS','ACT') NOT NULL,
             `Postcode` CHAR(4) NOT NULL,
             `Email` VARCHAR(100) NOT NULL,
-            `Phone-number` VARCHAR(20) NOT NULL,
-            `Skills` VARCHAR(50) NOT NULL,
-            `Other-skills` TEXT DEFAULT NULL
+            `Phonenumber` VARCHAR(20) NOT NULL,
+            `Skills` TEXT NOT NULL,
+            `Otherskills` TEXT DEFAULT NULL
             'status' ENUM('New','Current','Final') NOT NULL DEFAULT 'New'
         )";
         if (mysqli_query($conn, $create_table)){
