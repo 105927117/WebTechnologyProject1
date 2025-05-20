@@ -33,7 +33,7 @@ require_once("settings.php");
 
         if (mysqli_num_rows($result) > 0) {
             echo "<p>$textmsg</p>";
-            echo "<table border='1' cellpadding='5'>";
+            echo "<table border='1' cellpadding='5' class='resize-table'>";
             echo "<tr>
                     <th>EOInumber</th><th>Job Reference</th><th>First Name</th><th>Last Name</th><th>DOB</th>
                     <th>Gender</th><th>Street Address</th><th>Suburb</th><th>State</th><th>Postcode</th>
@@ -95,7 +95,7 @@ require_once("settings.php");
 
         if (mysqli_num_rows($result) > 0) {
             echo "<p>$textmsg</p>";
-            echo "<table border='1' cellpadding='5'>";
+            echo "<table border='1' cellpadding='5' class='resize-table'>";
             echo "<tr>
                     <th>EOInumber</th><th>Job Reference</th><th>First Name</th><th>Last Name</th><th>DOB</th>
                     <th>Gender</th><th>Street Address</th><th>Suburb</th><th>State</th><th>Postcode</th>
@@ -166,7 +166,7 @@ require_once("settings.php");
     
             if (mysqli_num_rows($result) > 0) {
                 echo "<p>$textmsg</p>";
-                echo "<table border='1' cellpadding='5'>";
+                echo "<table border='1' cellpadding='5' class='resize-table'>";
                 echo "<tr>
                         <th>EOInumber</th><th>Job Reference</th><th>First Name</th><th>Last Name</th><th>DOB</th>
                         <th>Gender</th><th>Street Address</th><th>Suburb</th><th>State</th><th>Postcode</th>
