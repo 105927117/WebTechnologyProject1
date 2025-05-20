@@ -96,34 +96,34 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
     }
     
     $query = "INSERT INTO eoi (
-    `Jobrefnum`, 
-    `firstname`, 
-    `lastname`, 
-    `DOB`, 
-    `Gender`, 
-    `StreetAddress`, 
-    `Suburb`, 
-    `State`, 
-    `Postcode`, 
-    `Email`, 
-    `Phonenumber`, 
-    `Skills`, 
-    `Otherskills`)
-    VALUES (
-    '$job_ref', 
-    '$first_name', 
-    '$last_name', 
-    '$dob', 
-    '$gender', 
-    '$address', 
-    '$suburb', 
-    '$state', 
-    '$postcode', 
-    '$email', 
-    '$phone', 
-    '$skills', 
-    '$other_skills'
-    )";
+        `Jobrefnum`, 
+        `firstname`, 
+        `lastname`, 
+        `DOB`, 
+        `Gender`, 
+        `StreetAddress`, 
+        `Suburb`, 
+        `State`, 
+        `Postcode`, 
+        `Email`, 
+        `Phonenumber`, 
+        `Skills`, 
+        `Otherskills`)
+        VALUES (
+        '$job_ref', 
+        '$first_name', 
+        '$last_name', 
+        '$dob', 
+        '$gender', 
+        '$address', 
+        '$suburb', 
+        '$state', 
+        '$postcode', 
+        '$email', 
+        '$phone', 
+        '$skills', 
+        '$other_skills'
+        )";
     $result = mysqli_query($conn, $query);
     if (!$result) {
         # Create the table
@@ -141,8 +141,8 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
             `Email` VARCHAR(100) NOT NULL,
             `Phonenumber` VARCHAR(20) NOT NULL,
             `Skills` TEXT NOT NULL,
-            `Otherskills` TEXT DEFAULT NULL
-            'status' ENUM('New','Current','Final') NOT NULL DEFAULT 'New'
+            `Otherskills` TEXT DEFAULT NULL,
+            `status` ENUM('New','Current','Final') NOT NULL DEFAULT 'New'
         )";
         if (mysqli_query($conn, $create_table)){
             $result = mysqli_query($conn, $query);
