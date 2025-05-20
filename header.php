@@ -20,6 +20,9 @@
     if ($page == "about"){
         echo("'ClickMaXXing, COS10026, webpage, website, web development, IT, web solutions, about, Alex Petrucci, Mohamed Aarriz Mohamed Habeeb, Kunvuth You, Carl Petrucci, Swinburne, students, team, computer science'");
     }
+    if ($page == "manage"){
+        echo("'ClickMaXXing, COS10026, webpage, website, web development, IT, web solutions, manage, admin, administration, manager, applications, EOI'");
+    }
     ?>> <!--description changes dynamically based on page variable-->
     <meta name="description" content=<?php
     if ($page == "home"){
@@ -33,6 +36,9 @@
     }
     if ($page == "about"){
         echo("'ClickMaXXing is an organisation which specialises in empowering your business with high quality web solutions. Learn more about the dedicated team here at ClickMaXXing! This website was created by a team of enthusiastic computer science students at Swinburne University of Technology, and is a showcase of the web development skills they have gained in their first semester!'");
+    }
+    if ($page == "manage"){
+        echo("'ClickMaXXing is an organisation which specialises in empowering your business with high quality web solutions. From here, managers/employers at ClickMaXXing can quickly view search and sort through applications and approve or decline these applications.'");
     }
     ?>>
     <!--Title of the page which shows on the tab-->
