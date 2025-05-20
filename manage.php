@@ -54,7 +54,13 @@ require_once("settings.php");
                 echo "<td>" . htmlspecialchars($row['Postcode']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['Email']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['Phonenumber']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['Skills']) . "</td>";
+            
+                echo "<td><ul>";
+                foreach (explode("\n", trim($row["Skills"])) as $skill) {
+                    echo "<li>" . htmlspecialchars($skill) . "</li>";
+                }
+                echo "</ul></td>";
+
                 echo "<td>" . htmlspecialchars($row['Otherskills']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['status']) . "</td>";
                 echo "</tr>";
@@ -110,7 +116,13 @@ require_once("settings.php");
                 echo "<td>" . htmlspecialchars($row['Postcode']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['Email']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['Phonenumber']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['Skills']) . "</td>";
+            
+                echo "<td><ul>";
+                foreach (explode("\n", trim($row["Skills"])) as $skill) {
+                    echo "<li>" . htmlspecialchars($skill) . "</li>";
+                }
+                echo "</ul></td>";
+
                 echo "<td>" . htmlspecialchars($row['Otherskills']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['status']) . "</td>";
                 echo "</tr>";
@@ -175,7 +187,13 @@ require_once("settings.php");
                     echo "<td>" . htmlspecialchars($row['Postcode']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['Email']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['Phonenumber']) . "</td>";
-                    echo "<td>" . htmlspecialchars($row['Skills']) . "</td>";
+
+                    echo "<td><ul>";
+                    foreach (explode("\n", trim($row["Skills"])) as $skill) {
+                        echo "<li>" . htmlspecialchars($skill) . "</li>";
+                    }
+                    echo "</ul></td>";
+
                     echo "<td>" . htmlspecialchars($row['Otherskills']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['status']) . "</td>";
                     echo "</tr>";
