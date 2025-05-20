@@ -785,4 +785,6 @@ td {
 /* class which makes tables scrollable on the x axis */
 .resize-table {
     overflow-x: auto;
+    width: 100%;
+    display: block;
 }
