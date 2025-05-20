@@ -239,14 +239,23 @@ require_once("settings.php");
         $id = $_POST['eoi_id'];                 // this line stores the value of the input(integer) from the form named eoi_id from the variable named $id 
         $status = $_POST['status'];         // this line stores the value of the input(string) from the form named status from the variable named $id 
         $new_status = mysqli_real_escape_string($conn,$status);  
-        $query = "UPDATE eoi set status = '$new_status' WHERE EOInumber = $id";
-        
-        
-        if (mysqli_query($conn,$query)) // this line will check if the query is running in the database 
-            echo "The status has been updated successfully";
-        else 
-            echo "The status has not been updated";
+        $query = "SELECT * FROM eoi WHERE EOInumber = $id";
 
+        if ($result = mysqli_query($conn,$query)) {
+            if (mysqli_fetch_assoc($result)) {
+
+                $query = "UPDATE eoi set status = '$new_status' WHERE EOInumber = $id";
+                            
+                if (mysqli_query($conn,$query)) // this line will check if the query is running in the database 
+                    echo "The status has been updated successfully";
+                else 
+                    echo "The status has not been updated";
+            } else {
+                echo "None of the EOIs matched the id provided."; 
+            }
+        } else {
+            echo "The status has not been updated";
+        }
     }
         
     mysqli_close($conn);
