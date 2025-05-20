@@ -22,7 +22,7 @@ require_once("settings.php");
 ?>
     <h2>1. List All EOIs</h2>
     <form method="post">
-        <button type="submit" name="list_all">Show All EOIs</button>
+        <button type="submit" name="list_all" class="form-buttons">Show All EOIs</button>
     </form>
 <?php
     //  Listing  all EOIs
@@ -79,7 +79,7 @@ require_once("settings.php");
 <h2>2. List EOIs a Job</h2>
 <form method="post">
      <input type="text" name="job_reference" required >
-    <button type="submit" name="search_by_job">Search</button>
+    <button type="submit" name="search_by_job" class="form-buttons">Search</button>
 </form>
 
 <?php
@@ -144,7 +144,7 @@ require_once("settings.php");
 <form method="post">
     First Name: <input type="text" name="firstname">
     Last Name: <input type="text" name="lastname">
-    <button type="submit" name="search_by_name">Search</button>
+    <button type="submit" name="search_by_name" class="form-buttons">Search</button>
 </form>
 
 <?php
@@ -212,7 +212,7 @@ require_once("settings.php");
 <h2>4. Delete EOIs by Job Reference</h2>
 <form method="post">
      <input type="text" name="job_ref" required>
-    <button type="submit" name="delete_by_job">Delete EOIs</button>
+    <button type="submit" name="delete_by_job" class="form-buttons">Delete EOIs</button>
 </form>
 
 <?php
@@ -247,7 +247,7 @@ require_once("settings.php");
         <option value="Current">Current</option>
         <option value="Final">Final</option>
     </select>
-    <button type="submit" name="update_status">Update</button>
+    <button type="submit" name="update_status" class="form-buttons">Update</button>
 </form>
 <?php
     //  Updating EOI status 
