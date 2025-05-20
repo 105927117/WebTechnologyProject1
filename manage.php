@@ -1,5 +1,6 @@
 
 <?php 
+    $page = "manage";
     require_once("header.php");
 
 ?>
