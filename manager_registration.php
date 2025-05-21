@@ -41,7 +41,7 @@
                         $stmt -> bind_param("ssss", $_SESSION["username"], $_SESSION["password"], $_SESSION["first_name"], $_SESSION["last_name"]);
                         $stmt -> execute();
 
-                       header("Location: manage_login.php");
+                       header("Location: manager_login.php");
                     }
                 }
             }
