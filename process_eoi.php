@@ -95,6 +95,34 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
         die("Invalid phone number. Only digits and spaces, 8–12 characters.");
     }
     
+    #Check if the 'eoi' table exists
+    $table_check = mysqli_query($conn, "SHOW TABLES LIKE 'eoi'");
+    if (mysqli_num_rows($table_check) == 0) {
+        # Table doesn't exist, so create it
+        $create_table = "CREATE TABLE IF NOT EXISTS eoi (
+            EOInumber INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+            `Jobrefnum` VARCHAR(20) NOT NULL,
+            `firstname` VARCHAR(20) NOT NULL,
+            `lastname` VARCHAR(20) NOT NULL,
+            `DOB` DATE NOT NULL,
+            `Gender` ENUM('Male','Female','Others') NOT NULL,
+            `StreetAddress` VARCHAR(40) NOT NULL,
+            `Suburb` VARCHAR(40) NOT NULL,
+            `State` ENUM('VIC','NSW','QLD','NT','WA','SA','TAS','ACT') NOT NULL,
+            `Postcode` CHAR(4) NOT NULL,
+            `Email` VARCHAR(100) NOT NULL,
+            `Phonenumber` VARCHAR(20) NOT NULL,
+            `Skills` TEXT NOT NULL,
+            `Otherskills` TEXT DEFAULT NULL,
+            `status` ENUM('New','Current','Final') NOT NULL DEFAULT 'New'
+        )";
+    
+        if (!mysqli_query($conn, $create_table)) {
+            die("Error creating table: " . mysqli_error($conn));
+        }
+    }
+    
+    # insert the data
     $query = "INSERT INTO eoi (
         `Jobrefnum`, 
         `firstname`, 
@@ -124,35 +152,11 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
         '$skills', 
         '$other_skills'
         )";
+    
     $result = mysqli_query($conn, $query);
     if (!$result) {
-        # Create the table
-        $create_table = "CREATE TABLE IF NOT EXISTS eoi (
-            EOInumber INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
-            `Jobrefnum` VARCHAR(20) NOT NULL,
-            `firstname` VARCHAR(20) NOT NULL,
-            `lastname` VARCHAR(20) NOT NULL,
-            `DOB` DATE NOT NULL,
-            `Gender` ENUM('Male','Female','Others') NOT NULL,
-            `StreetAddress` VARCHAR(40) NOT NULL,
-            `Suburb` VARCHAR(40) NOT NULL,
-            `State` ENUM('VIC','NSW','QLD','NT','WA','SA','TAS','ACT') NOT NULL,
-            `Postcode` CHAR(4) NOT NULL,
-            `Email` VARCHAR(100) NOT NULL,
-            `Phonenumber` VARCHAR(20) NOT NULL,
-            `Skills` TEXT NOT NULL,
-            `Otherskills` TEXT DEFAULT NULL,
-            `status` ENUM('New','Current','Final') NOT NULL DEFAULT 'New'
-        )";
-        if (mysqli_query($conn, $create_table)){
-            $result = mysqli_query($conn, $query);
-        }else{
-            echo "Error creating table: " . mysqli_error($conn);
-        }
-        if (!$result) {
-            echo "Error: " . $query . "<br>" . mysqli_error($conn);
-        }
-    }
+        die("Error inserting data: " . mysqli_error($conn));
+    }  
     
     echo "Application submitted successfully. EOI number: " . mysqli_insert_id($conn);
     mysqli_close($conn);
