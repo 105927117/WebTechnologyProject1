@@ -4,6 +4,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"]))
     {
         session_unset();
+        session_destroy();
         header("Location: manager_registration.php");
     }
     function clean_input($data)
@@ -39,9 +40,8 @@
                         VALUES (?, ?, ?, ?);");
                         $stmt -> bind_param("ssss", $_SESSION["username"], $_SESSION["password"], $_SESSION["first_name"], $_SESSION["last_name"]);
                         $stmt -> execute();
-                        $result = $stmt -> get_result();
 
-                       header("Location: manage.php");
+                       header("Location: manage_login.php");
                     }
                 }
             }

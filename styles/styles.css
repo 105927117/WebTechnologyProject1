@@ -791,3 +791,15 @@ td {
     width: 100%;
     display: block;
 }
+/*-----------------------------------------MANAGER_LOGIN-------------------------------------------------------*/
+.link{
+    text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-color: red ;
+    text-decoration-style: solid ;
+    text-decoration-thickness: 100px;
+    display: contents;
+    background: none;
+    background-color: transparent;
+    color: red;
+}
