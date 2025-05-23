@@ -469,6 +469,7 @@ input[type="checkbox"] {
     text-decoration: none;
     background-color: var(--header-colour);
     border-radius: 1rem;
+    border-style: none;
     width: 15vw;
     text-align: center;
     transition-duration: 0.25s ;
