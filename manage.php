@@ -285,11 +285,6 @@ require_once("settings.php");
 
 
 
-
-
-
-
-
 </main>
 
 
