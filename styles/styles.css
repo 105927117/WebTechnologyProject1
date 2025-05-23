@@ -194,6 +194,7 @@ header ul {
 /* Styles for the main content of the page */
 main {
     padding: 2rem;
+    min-height: 75vh
 }
 
 /* Styles to shrink the width for pages which are too wide */
