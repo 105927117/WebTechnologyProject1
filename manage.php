@@ -1,5 +1,6 @@
 
 <?php 
+    //specifying the page name allows it to appear in the title
     $page = "manage";
     require_once("header.php");
 
@@ -25,6 +26,7 @@ require_once("settings.php");
         <button type="submit" name="list_all" class="form-buttons">Show All EOIs</button>
         <label for="sort">Sort by:</label>
         <select id="sort" name="sort">
+            <!--the php code inside of each option is just there to ensure that when the page is reloaded via post, the correct option is still selected-->
             <option value="EOInumber" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "EOInumber") {echo("selected='selected'");} ?>>EOI number</option>
             <option value="Jobrefnum" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "Jobrefnum") {echo("selected='selected'");} ?>>Job reference</option>
             <option value="firstname" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "firstname") {echo("selected='selected'");} ?>>First name</option>
@@ -43,7 +45,7 @@ require_once("settings.php");
 <?php
     //  Listing  all EOIs
     if (isset($_POST['list_all'])) { // this line checks if the form is submitted by clicking the submit button named "list_all"
-        $query = "SELECT * FROM eoi ORDER BY " . $_POST["sort"] . " ASC;";
+        $query = "SELECT * FROM eoi ORDER BY " . $_POST["sort"] . " ASC;"; //ORDER BY ... ASC; will order the result into ascending order (alphabet or numbers) for the field name inserted in the code
         $result = mysqli_query($conn,$query);
         $textmsg = 'All EOIs listed below';
 
