@@ -68,8 +68,9 @@ body {
 /* Styles for logo in the header of the page */
 header svg {
     color: var(--contrast-heading-colour);
+    max-width: 100%;
     width: min(100vw, 20rem);
-    padding: 1rem;
+    padding: 0.1rem;
     box-sizing: border-box;
     transition-duration: 0.25s;
 }
@@ -231,6 +232,7 @@ h1 {
 .center-wrapper {
     display: flex;
     justify-content: center;
+    flex-grow: 1; /*allows the wrapper to expand*/
 }
 
 /* Styles for class which is designed to add space between content inside */
@@ -815,4 +817,20 @@ td {
     padding: 0%;
     margin: 0%;
     color: var(--text-color);
+}
+/*-----------------------------------------HEADER-------------------------------------------------------*/
+
+/*styles keep the logo and manage icon on a single row*/
+.top-row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*styles adjust the manager icon size and keep it on the right hand side*/
+#manage-icon *{
+    display: flex;
+    margin: 0.2rem;
+    width: 3rem;
+    flex-shrink: 1;
 }
