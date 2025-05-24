@@ -104,7 +104,7 @@ include_once("header.php");
                                             </dl>
                                             <dl>
                                                 <dt><strong>Contribution:</strong></dt>
-                                                <dd>about.php, header.php, footer.php, styles.css, settings.php, include files, enhancments.php</dd>
+                                                <dd>about.php, header.php, footer.php, styles.css, settings.php, include files, enhancments.php, manager_login.php, manager_registration.php, clickmaxxing_db.sql</dd>
                                             </dl>
                                         </dd>
                                     </dl>
@@ -335,7 +335,11 @@ include_once("header.php");
         </section>
 
         <hr>
-
+        <section>
+            <h3>Enhancements</h3>
+            <p>Want to find out about all of the ways this website has been enhanced?</p>
+            <p>You can view our enhancements <a href="enhancements.php" class="link">here</a>!!!</p>
+        </section>
         <figure id="group-photo-figure">
             <img src="images/group-photo.jpg" id="group-photo" alt="photo of ClickMaXXing group members">
             <figcaption><em>(from left to right)</em> Carl Petrucci, Mohamed Aarriz Mohamed Habeeb, Alex Petrucci, Kunvuth You</figcaption>
