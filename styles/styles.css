@@ -794,14 +794,25 @@ td {
     display: block;
 }
 /*-----------------------------------------MANAGER_LOGIN-------------------------------------------------------*/
+
+/*these styles remove the formatting given to other anchors, so that links look like normal links*/
 .link{
+    display: inline;
     text-decoration: underline;
-    text-decoration-line: underline;
-    text-decoration-color: red ;
-    text-decoration-style: solid ;
-    text-decoration-thickness: 100px;
-    display: contents;
-    background: none;
     background-color: transparent;
-    color: red;
+    background: none;
+    padding: 0%;
+    margin: 0%;
+    color: var(--heading-colour);
+}
+
+/*these styles remove the formatting given to other anchors when hovered, so that links look like normal links*/
+.link:hover{
+    display: inline;
+    text-decoration: underline;
+    background-color: transparent;
+    background: none;
+    padding: 0%;
+    margin: 0%;
+    color: var(--text-color);
 }
