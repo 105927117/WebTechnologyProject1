@@ -8,8 +8,20 @@ function clean_input($data)
     $data = htmlspecialchars($data);
     return $data;
 }
+
+if (!isset($_SESSION["attempts"]))
+{
+    $_SESSION["attempts"] = 4;
+}
+if (!isset($_SESSION["delay_start"]))
+{
+    $_SESSION["delay_start"] = 0;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
+    if ($_SESSION["delay_start"] + 30 < time())
+    {
     $_SESSION["username"] = clean_input($_POST["username"]);
 
     $stmt = $conn -> prepare("SELECT * FROM managers WHERE username = ?");
@@ -24,6 +36,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
             header("Location: manage.php");
         }
+        else
+        {
+            $_SESSION["attempts"] --;
+        }
+    }
+    else
+    {
+        $_SESSION["attempts"] --;
+    }
     }
 }
 else
@@ -42,7 +63,15 @@ include_once("header.php");
             <?php
             if($_SERVER["REQUEST_METHOD"] == "POST")
             {
-                echo("<p>Authentication failed!. Either username or password is incorrect!!!</p>");
+                if ($_SESSION["attempts"] > 0)
+                {
+                    echo("<p>Authentication failed!. Either username or password is incorrect. " . $_SESSION["attempts"] . " attempts remaining</p>");
+                }
+                else
+                {
+                    echo("<p>No more attempts! you will have to wait a while before trying again</p>.");
+                    $_SESSION["delay_start"] = time();
+                }
             }
             ?>
             <label for="username" class="required">Username:</label>
