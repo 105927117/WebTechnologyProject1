@@ -23,13 +23,29 @@ require_once("settings.php");
     <h2>1. List All EOIs</h2>
     <form method="post">
         <button type="submit" name="list_all" class="form-buttons">Show All EOIs</button>
+        <label for="sort">Sort by:</label>
+        <select id="sort" name="sort">
+            <option value="EOInumber" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "EOInumber") {echo("selected='selected'");} ?>>EOI number</option>
+            <option value="Jobrefnum" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "Jobrefnum") {echo("selected='selected'");} ?>>Job reference</option>
+            <option value="firstname" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "firstname") {echo("selected='selected'");} ?>>First name</option>
+            <option value="lastname" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "lastname") {echo("selected='selected'");} ?>>Last name</option>
+            <option value="DOB" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "DOB") {echo("selected='selected'");} ?>>DOB</option>
+            <option value="Gender" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "Gender") {echo("selected='selected'");} ?>>Gender</option>
+            <option value="StreetAddress" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "StreedAddress") {echo("selected='selected'");} ?>>Street Address</option>
+            <option value="Suburb" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "Suburb") {echo("selected='selected'");} ?>>Suburb</option>
+            <option value="State" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "State") {echo("selected='selected'");} ?>>State</option>
+            <option value="Postcode" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "Postcode") {echo("selected='selected'");} ?>>Postcode</option>
+            <option value="Email" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "Email") {echo("selected='selected'");} ?>>Email</option>
+            <option value="Phonenumber" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "Phonenumber") {echo("selected='selected'");} ?>>Phone number</option>
+            <option value="status" <?php if (isset($_POST["sort"]) && $_POST["sort"] == "status") {echo("selected='selected'");} ?>>Status</option>
+        </select>
     </form>
 <?php
     //  Listing  all EOIs
     if (isset($_POST['list_all'])) { // this line checks if the form is submitted by clicking the submit button named "list_all"
-        $query = "SELECT * FROM eoi";
+        $query = "SELECT * FROM eoi ORDER BY " . $_POST["sort"] . " ASC;";
         $result = mysqli_query($conn,$query);
-        $textmsg = 'All eoi listed below';
+        $textmsg = 'All EOIs listed below';
 
         if (mysqli_num_rows($result) > 0) {
             echo "<p>$textmsg</p>";
@@ -76,7 +92,7 @@ require_once("settings.php");
 ?>
 
 <!-- 2. Search by Job Reference -->
-<h2>2. List EOIs a Job</h2>
+<h2>2. List EOIs for a Job</h2>
 <form method="post">
      <input type="text" name="job_reference" required >
     <button type="submit" name="search_by_job" class="form-buttons">Search</button>
