@@ -25,10 +25,14 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
     $email = clean_input($_POST["Email"]);
     $phone = clean_input($_POST["Phone-number"]);
     $skills = "";
-    if (isset($_POST["Other-skills"])){
+    if (isset($_POST["skills"])) {
         foreach ($_POST["skills"] as $skill) {
             $skills .= clean_input($skill) . "\n";
-        } 
+        }
+    } else {
+        die("Please select at least one skill.");
+    }
+    if (isset($_POST["Other-skills"])){
         if (in_array("Other", $_POST["skills"])) {
             if (empty($_POST["Other-skills"])) {
                 die("Please specify the 'Other' skill.");
@@ -39,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"]  == "POST") {
             }
         }
     }else{
-        die("Please select at least one skill.");
+        die("Please specifiy what other skills.");
     }
     #if other skills are not provided, set to null
     $other_skills = isset($_POST["Other-skills"]) ? clean_input($_POST["Other-skills"]) : "";
