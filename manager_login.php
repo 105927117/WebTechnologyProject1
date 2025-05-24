@@ -82,7 +82,7 @@ include_once("header.php");
             <input type="reset" class="form-buttons">
         </fieldset>
     </form>
-    <p>Don't have an account yet?<br>Register <a href="manager_registration.php" class="link">here!</a></p>
+    <p>Don't have an account yet?<br>Register <a href="manager_registration.php" class="link">here</a>!</p>
 </main>
 <?php
 include_once("footer.php");
