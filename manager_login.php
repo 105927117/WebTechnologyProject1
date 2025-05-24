@@ -20,6 +20,8 @@ if (!isset($_SESSION["delay_start"]))
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
+    if ($_SESSION["delay_start"] + 30 < time())
+    {
     $_SESSION["username"] = clean_input($_POST["username"]);
 
     $stmt = $conn -> prepare("SELECT * FROM managers WHERE username = ?");
@@ -42,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     else
     {
         $_SESSION["attempts"] --;
+    }
     }
 }
 else
@@ -67,6 +70,7 @@ include_once("header.php");
                 else
                 {
                     echo("<p>No more attempts! you will have to wait a while before trying again</p>.");
+                    $_SESSION["delay_start"] = time();
                 }
             }
             ?>
