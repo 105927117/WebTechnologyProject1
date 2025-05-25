@@ -7,7 +7,7 @@ include_once("header.php");
     <!--heading for the page-->
     <h1>Enhancements</h1>
     <!--link to manager login (not manage.php since I don't want unauthorised access to be possible)-->
-    <p><a href="manager_registration.php" class="form-buttons">Sort EOIs by field</a></p>
+    <p><a href="manager_login.php" class="form-buttons">Sort EOIs by field</a></p>
     <p>Managers can sort the EOIs based on alphabetical or numerical order for  a specified field.</p>
     <p>(To try it for yourself, you will need to be logged in first!)</p>
     <!--link to manager registration-->
