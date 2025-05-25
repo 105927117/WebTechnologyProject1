@@ -833,3 +833,67 @@ td {
     width: 3rem;
     flex-shrink: 1;
 }
+
+/* Styles to make name filter on manage page not show up by default */
+#filter-name {
+    display: none;
+}
+
+/* Styles to make name filter on the manage page show up when name has been selected in the filter menu */
+select:has(option[value="name"]:checked) ~ #filter-name {
+  display: block;
+}
+
+/* Styles to make job filter on manage page not show up by default */
+#filter-job {
+    display: none;
+}
+
+/* Styles to make job filter on manage page show up when job has been selected in the filter menu */
+select:has(option[value="job"]:checked) ~ #filter-job {
+    display: block;
+}
+
+/* Styles to make eoi selection on manage page not show up by default */
+#select-from-eoi {
+    display: none;
+}
+
+/* Stules to make eoi selection on manage page show up when eoi number has been selected in selection menu */
+select:has(option[value="eoi_number"]:checked) ~ #select-from-eoi {
+    display: block;
+}
+
+/* Styles to make reference number selection on manage page not show up by default */
+#select-from-refnum {
+    display: none;
+}
+
+/* Styles to make reference number selection on manage page show up when reference number has been selected in selection menu */
+select:has(option[value="reference_number"]:checked) ~ #select-from-refnum {
+    display: block;
+}
+
+/* Styles to make status selection on manage page not show up by default */
+#status-selection {
+    display: none;
+}
+
+/* Styles to make status selection on manage page show up when modify option is set to change status */
+select:has(option[value="status"]:checked) ~ #status-selection {
+    display: block;
+}
+
+/* Container which groups the eoi forms together */
+.eoi-management-forms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* Styles for the eoi forms */
+.manage-eoi-form {
+    min-width: 10rem;
+    width: 40%;
+}
