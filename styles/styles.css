@@ -650,7 +650,6 @@ input[type="checkbox"] {
     border-color: var(--accent-color);
     border-style: solid;
     padding: 1rem;
-    margin-right: 1rem;
     color: var(--text-color);
 }
 
