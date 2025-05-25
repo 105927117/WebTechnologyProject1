@@ -2,32 +2,44 @@
 <?php 
     //specifying the page name allows it to appear in the title
     $page = "manage";
+    session_start();
+    if (!isset($_SESSION["username"])) {
+        header("Location: manager_login.php");
+        exit;
+    }
     require_once("header.php");
-
 ?>
 <main>
-<h1>EOI Management</h1>
-<?php
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
-    
-    $page = "Manage";
-    
-    require_once("settings.php");
-    
-    // Get all the jobs to fill in the filter options
-    $sql = "SELECT * FROM jobs";
-    $result = mysqli_query($conn, $sql);
-    $jobs = [];
-    if ($result) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $jobs[] = $row;
-        }
-    } else {
-        echo "Query failed.";
-    }
-    ?>
 
+<p>Actions:</p>
+<ul>
+    <li><a class="link" href="#eoi-management">Manage EOIs</a></li>
+    <li><a class="link" href="#approve-managers">Approve Managers</a></li>
+    <li><a class="link" href="logout.php">Logout</a></li>
+</ul>
+
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+$page = "Manage";
+
+require_once("settings.php");
+
+// Get all the jobs to fill in the filter options
+$sql = "SELECT * FROM jobs";
+$result = mysqli_query($conn, $sql);
+$jobs = [];
+if ($result) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $jobs[] = $row;
+    }
+} else {
+    echo "Query failed.";
+}
+?>
+
+<h1 id="eoi-management">EOI Management</h1>
 <div class="eoi-management-forms">
     <div class="manage-eoi-form">
         <h2>View</h2>
@@ -116,6 +128,15 @@
 <br>
 
 <?php
+// If user has pressed the approve managers button
+if (isset($_POST["approve"])) {
+    foreach ($_POST["approved_managers"] as $manager) {
+        $stmt = $conn->prepare("UPDATE managers SET approved=1 WHERE username=?;");
+        $stmt->bind_param("s", $manager);
+        $stmt->execute();
+    }
+}
+
 // If user has pressed the modify button
 if (isset($_POST["modify"])) {
     if ($_POST["selection"] == "eoi_number") {
@@ -226,27 +247,35 @@ if (mysqli_num_rows($result) > 0) {
 }
 ?>
 
-<?php
-
-    // deleting eoi by the job reference number 
-    if (isset($_POST['delete_by_job'])){
-        $job_ref = mysqli_real_escape_string($conn,$_POST['job_ref']);  // this line gets the input from the form and removes all the special charcaters
-        $query = "DELETE FROM eoi WHERE Jobrefnum = '$job_ref' "; // sql query for deleting a value.
-        $result = mysqli_query($conn,$query);  // runs the query to the database 
-        $textmsg = "Deleted the EOI with JOB REFERNCE, $job_ref";  // text message that will appear on the webpage 
-
-
-        if($result){
-            echo "$textmsg";
+<h1 id="approve-managers">Approve Managers</h1>
+<form method="post">
+    <button type="submit" class="form-buttons" name="approve">Approve Selected</button>
+    <br>
+    <br>
+    <?php
+    $query = "SELECT * FROM managers WHERE approved=0";
+    $result = mysqli_query($conn, $query);
+    if ($result) {
+        if ($result->num_rows == 0) {
+            echo "<p>All manager requests have been approved.</p>";
+        } else {
+            echo "<table class='resize-table'>";
+            echo "<tr><th>Username</th><th>First Name</th><th>Last Name</th><th>Approve</th></tr>";
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr>";
+                echo "<td>" . $row["username"] . "</td>";
+                echo "<td>" . $row["first_name"] . "</td>";
+                echo "<td>" . $row["last_name"] . "</td>";
+                echo "<td><input type='checkbox' name='approved_managers[]' value='" . $row["username"] . "'></td>";
+                echo "</tr>";
+            }
+            echo "</table>";
         }
-
-        else{
-            echo "An error has occured.";
-        }
-
+    } else {
+        echo "Query Error!";
     }
-
 ?>
+</form>
 </main>
 <?php
     mysqli_close($conn);

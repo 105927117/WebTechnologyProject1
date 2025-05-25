@@ -52,12 +52,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         else
         {
             $_SESSION["attempts"] --;
+            $_SESSION["username"] = null;
         }
     }
     else
     //if the username doesnt exist decrement the attempts
     {
         $_SESSION["attempts"] --;
+        $_SESSION["username"] = null;
     }
     }
 }
