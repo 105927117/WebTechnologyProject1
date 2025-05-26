@@ -216,27 +216,27 @@ if (mysqli_num_rows($result) > 0) {
 
     while ($row = mysqli_fetch_assoc($result)) {
         echo "<tr>";
-        echo "<td>" . htmlspecialchars($row['EOInumber']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['Jobrefnum']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['firstname']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['lastname']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['DOB']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['Gender']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['StreetAddress']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['Suburb']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['State']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['Postcode']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['Email']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['Phonenumber']) . "</td>";
+        echo "<td>" . $row['EOInumber'] . "</td>";
+        echo "<td>" . $row['Jobrefnum'] . "</td>";
+        echo "<td>" . $row['firstname'] . "</td>";
+        echo "<td>" . $row['lastname'] . "</td>";
+        echo "<td>" . $row['DOB'] . "</td>";
+        echo "<td>" . $row['Gender'] . "</td>";
+        echo "<td>" . $row['StreetAddress'] . "</td>";
+        echo "<td>" . $row['Suburb'] . "</td>";
+        echo "<td>" . $row['State'] . "</td>";
+        echo "<td>" . $row['Postcode'] . "</td>";
+        echo "<td>" . $row['Email'] . "</td>";
+        echo "<td>" . $row['Phonenumber'] . "</td>";
     
         echo "<td><ul>";
         foreach (explode("\n", trim($row["Skills"])) as $skill) {
-            echo "<li>" . htmlspecialchars($skill) . "</li>";
+            echo "<li>" . $skill . "</li>";
         }
         echo "</ul></td>";
 
-        echo "<td>" . htmlspecialchars($row['Otherskills']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['status']) . "</td>";
+        echo "<td>" . $row['Otherskills'] . "</td>";
+        echo "<td>" . $row['status'] . "</td>";
         echo "</tr>";
     }
 
