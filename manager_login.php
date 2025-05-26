@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $row = $result -> fetch_assoc();
         //if the username matches the pasword go to the manage.php page, otherwise decrement the attempts
-        if (password_verify($_POST["password"], $row["password"]))
+        if (password_verify($_POST["password"], $row["password"]) && $row["approved"] == 1)
         {
             header("Location: manage.php");
         }
@@ -92,7 +92,7 @@ include_once("header.php");
             {
                 if ($_SESSION["attempts"] > 0)
                 {
-                    echo("<p>Authentication failed!. Either username or password is incorrect. " . $_SESSION["attempts"] . " attempts remaining</p>");
+                    echo("<p>Authentication failed!. Either username or password is incorrect, or you have not been approved as a manager. " . $_SESSION["attempts"] . " attempts remaining</p>");
                 }
                 else
                 {
