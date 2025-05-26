@@ -11,6 +11,12 @@ function clean_input($data)
     return $data;
 }
 
+// Redirect to the manage page if the user is already logged in
+if (isset($_SESSION["username"])) {
+    header("Location: manage.php");
+    exit;
+}
+
 //set the number of attempts to 4 if it has not been set yet
 if (!isset($_SESSION["attempts"]))
 {
