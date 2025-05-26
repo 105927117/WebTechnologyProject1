@@ -72,7 +72,7 @@ include_once("header.php");
                                             </dl>
                                             <dl>
                                                 <dt><strong>Contribution:</strong></dt>
-                                                <dd>jobs.php, header.php, footer.php, styles.css, jobs description table, clickmaxxing_db.sql</dd>
+                                                <dd>jobs.php, header.php, footer.php, styles.css, jobs description table, clickmaxxing_db.sql, logout.php</dd>
                                             </dl>
                                         </dd>
                                     </dl>
