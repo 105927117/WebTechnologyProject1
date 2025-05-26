@@ -53,7 +53,7 @@
                         $stmt -> execute();
 
 
-                        session_unset();
+                        session_unset(); // logs user out so that they don't get redirected to manage page without approval
                         header("Location: manager_login.php");
                     }
                 }
