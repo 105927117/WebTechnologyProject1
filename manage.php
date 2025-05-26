@@ -148,11 +148,11 @@ if (isset($_POST["modify"])) {
         $bind = $_POST["refnum"];
     }
     if ($_POST["modification"] == "delete") {
-        $stmt = $conn->prepare("DELETE FROM eoi" . $where);
+        $stmt = $conn->prepare("DELETE FROM eoi" . $where);  // query for deleting the eoi from the table 
         $stmt->bind_param("s", $bind);
     }
     if ($_POST["modification"] == "status") {
-        $stmt = $conn->prepare("UPDATE eoi set status = ?" . $where);
+        $stmt = $conn->prepare("UPDATE eoi set status = ?" . $where);   // query for modifying the status from the table 
         $stmt->bind_param("ss", $_POST["change_status"], $bind);
     }
     $stmt->execute();
@@ -206,7 +206,7 @@ switch ($_POST["filter"]) {
 $stmt->execute();
 $result = $stmt->get_result();
 
-if (mysqli_num_rows($result) > 0) {
+if (mysqli_num_rows($result) > 0) {         // if the result has some details 
     echo "<table border='1' cellpadding='5' class='resize-table'>";
     echo "<tr>
             <th>EOInumber</th><th>Job Reference</th><th>First Name</th><th>Last Name</th><th>DOB</th>
@@ -214,10 +214,10 @@ if (mysqli_num_rows($result) > 0) {
             <th>Email</th><th>Phone Number</th><th>Skills</th><th>Other Skills</th><th>Status</th>
             </tr>";
 
-    while ($row = mysqli_fetch_assoc($result)) {
+    while ($row = mysqli_fetch_assoc($result)) { //fetches the detail from the $result 
         echo "<tr>";
         echo "<td>" . $row['EOInumber'] . "</td>";
-        echo "<td>" . $row['Jobrefnum'] . "</td>";
+        echo "<td>" . $row['Jobrefnum'] . "</td>";    // displays the $results in a table format 
         echo "<td>" . $row['firstname'] . "</td>";
         echo "<td>" . $row['lastname'] . "</td>";
         echo "<td>" . $row['DOB'] . "</td>";
@@ -230,7 +230,7 @@ if (mysqli_num_rows($result) > 0) {
         echo "<td>" . $row['Phonenumber'] . "</td>";
     
         echo "<td><ul>";
-        foreach (explode("\n", trim($row["Skills"])) as $skill) {
+        foreach (explode("\n", trim($row["Skills"])) as $skill) {  // loops through skills column and removes all the trailing whitespaces and puts them in a array 
             echo "<li>" . $skill . "</li>";
         }
         echo "</ul></td>";
@@ -249,14 +249,14 @@ if (mysqli_num_rows($result) > 0) {
 
 <h1 id="approve-managers">Approve Managers</h1>
 <form method="post">
-    <button type="submit" class="form-buttons" name="approve">Approve Selected</button>
+    <button type="submit" class="form-buttons" name="approve">Approve Selected</button> <!--buttons for the approve managers-->
     <br>
     <br>
     <?php
-    $query = "SELECT * FROM managers WHERE approved=0";
-    $result = mysqli_query($conn, $query);
+    $query = "SELECT * FROM managers WHERE approved=0";  
+    $result = mysqli_query($conn, $query);  // mysqli_query executes the query in the database and stores the results in the $result
     if ($result) {
-        if ($result->num_rows == 0) {
+        if ($result->num_rows == 0) {  
             echo "<p>All manager requests have been approved.</p>";
         } else {
             echo "<table class='resize-table'>";
