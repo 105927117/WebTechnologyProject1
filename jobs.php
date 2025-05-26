@@ -5,6 +5,7 @@ include_once("header.php");
 
 include_once("settings.php");
 
+// get all the jobs into an array
 $sql = "SELECT * FROM jobs";
 $result = mysqli_query($conn, $sql);
 $jobs = [];
@@ -49,12 +50,14 @@ mysqli_close($conn);
         <h2>Positions</h2>
         <!--Div below puts the cards in a flexbox so that they can adjust their positions for different screen sizes-->
         <div class="card-wrapper">
+            <!-- Goes through every job in the jobs array loaded earlier and jobs them on the page dynamically -->
             <?php foreach ($jobs as $job): ?>
             <article class="description-card">
                 <h2><?= $job["title"] ?></h2>
                 <p>Reference No. <?= $job["reference_number"] ?></p>
                 <img src="<?= $job["summary_image"] ?>" alt="<?= $job["summary_alt"] ?>">
                 <p><?= $job["summary"] ?></p>
+                <!-- str_replace below is to make replace spaces with - for valid html id -->
                 <a href="#<?= str_replace(" ", "-", $job["title"]) ?>" title="click to find out more about this position">More Info...</a>
             </article>
             <?php endforeach ?>

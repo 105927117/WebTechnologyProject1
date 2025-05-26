@@ -171,35 +171,33 @@ if (!isset($_POST["filter"])) {
 // Prepare a different sql statement based on the filter option chosen
 switch ($_POST["filter"]) {
     case "none":
-        $stmt = $conn->prepare("SELECT * FROM eoi ORDER BY ? ASC;");
-        $stmt->bind_param("s", $_POST["sort"]);
+        $stmt = $conn->prepare("SELECT * FROM eoi ORDER BY " . $_POST["sort"] . " ASC;");
         break;
 
     case "name":
         $first_name = $_POST["first_name"];
         $last_name = $_POST["last_name"];
         if ($first_name == "" && $last_name == "") { 
-            $stmt = $conn->prepare("SELECT * FROM eoi ORDER BY ? ASC;");
-            $stmt->bind_param("s", $_POST["sort"]);
+            $stmt = $conn->prepare("SELECT * FROM eoi ORDER BY " . $_POST["sort"] . " ASC;");
             break;
         }
         if ($first_name == "") {    
-            $stmt = $conn->prepare("SELECT * FROM eoi WHERE lastname=? ORDER BY ? ASC;");
-            $stmt->bind_param("ss", $last_name, $_POST["sort"]);
+            $stmt = $conn->prepare("SELECT * FROM eoi WHERE lastname=? ORDER BY " . $_POST["sort"] . " ASC;");
+            $stmt->bind_param("s", $last_name);
             break;
         }
         if ($last_name == "") {
-            $stmt = $conn->prepare("SELECT * FROM eoi WHERE firstname=? ORDER BY ? ASC;");
-            $stmt->bind_param("ss", $first_name, $_POST["sort"]);
+            $stmt = $conn->prepare("SELECT * FROM eoi WHERE firstname=? ORDER BY " . $_POST["sort"] . " ASC;");
+            $stmt->bind_param("s", $first_name);
             break;
         }
-        $stmt = $conn->prepare("SELECT * FROM eoi WHERE firstname=? AND lastname=? ORDER BY ? ASC;");
-        $stmt->bind_param("sss", $first_name, $last_name, $_POST["sort"]);
+        $stmt = $conn->prepare("SELECT * FROM eoi WHERE firstname=? AND lastname=? ORDER BY " . $_POST["sort"] . " ASC;");
+        $stmt->bind_param("ss", $first_name, $last_name);
         break;
 
     case "job":
-        $stmt = $conn->prepare("SELECT * FROM eoi WHERE Jobrefnum=? ORDER BY ? ASC;");
-        $stmt->bind_param("ss", $_POST["job"], $_POST["sort"]);
+        $stmt = $conn->prepare("SELECT * FROM eoi WHERE Jobrefnum=? ORDER BY " . $_POST["sort"] . " ASC;");
+        $stmt->bind_param("s", $_POST["job"]);
         break;
 }
 //  Listing  all EOIs
