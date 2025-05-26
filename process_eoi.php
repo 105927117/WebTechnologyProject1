@@ -5,6 +5,7 @@ $page = "process";
 require_once("header.php");
 ?>
 <main>
+    <p>
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -184,7 +185,7 @@ function process_data($conn) {
             return;
         }  
         
-        echo "Application submitted successfully. EOI number: " . mysqli_insert_id($conn);
+        echo "Application submitted successfully.";
         mysqli_close($conn);
     } else {
         header("Location: ./apply.php");
@@ -193,6 +194,8 @@ function process_data($conn) {
 }
 process_data($conn);
 ?>
+    </p>
+    <a href="apply.php" class="form-buttons">Back to Apply</a>
 </main>
 <?php
 require_once("footer.php");
