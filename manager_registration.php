@@ -52,7 +52,9 @@
                         //run the query
                         $stmt -> execute();
 
-                       header("Location: manager_login.php");
+
+                        session_unset();
+                        header("Location: manager_login.php");
                     }
                 }
             }
