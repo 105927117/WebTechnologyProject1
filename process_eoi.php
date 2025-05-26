@@ -185,7 +185,7 @@ function process_data($conn) {
             return;
         }  
         
-        echo "Application submitted successfully.";
+        echo "Application submitted successfully. EOI number: " . mysqli_insert_id($conn) . ".";
         mysqli_close($conn);
     } else {
         header("Location: ./apply.php");
